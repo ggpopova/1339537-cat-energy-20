@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Галина Попова](https://up.htmlacademy.ru/adaptive/20/user/1339537).
-* Наставник: `Неизвестно`.
+- Студент: [Галина Попова](https://up.htmlacademy.ru/adaptive/20/user/1339537).
+- Наставник: [Ольга Вадясова](https://up.htmlacademy.ru/adaptive/20/user/46068).
 
 ---
 
