@@ -70,9 +70,9 @@
 
   <main>
 
-    <h1 class="">Подбор программы</h1>
+    <h1 class="page__headding">Подбор программы</h1>
 
-    <form class="questionnaire-cat" action="https://echo.htmlacademy.ru">
+    <form class="questionnaire-cat" action="https://echo.htmlacademy.ru" method="GET">
       <h2 class="questionnaire-cat__headding">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
 
       <div class="questionnaire-cat__cat-data-wrapper">
@@ -80,16 +80,16 @@
         <fieldset class="questionnaire-cat__cat-data">
           <ul class="questionnaire-cat__list">
             <li class="questionnaire-cat__item">
-              <label class="questionnaire-cat-label" for="questionnaire-cat-input-name">Имя:*</label>
-              <input class="questionnaire-cat-input" id="questionnaire-cat-input-name" type="text" name="name" placeholder="Барсик">
+              <label class="questionnaire-cat__label" for="questionnaire-name">Имя:*</label>
+              <input class="questionnaire-cat__input" id="questionnaire-name" type="text" name="name" placeholder="Барсик">
             </li>
             <li class="questionnaire-cat__item">
-              <label class="questionnaire-cat-label" for="questionnaire-cat-input-weight">Вес (кг):*</label>
-              <input class="questionnaire-cat-input" id="questionnaire-cat-input-weight" type="number" name="number" placeholder="7">
+              <label class="questionnaire-cat__label" for="questionnaire-cat-input-weight">Вес (кг):*</label>
+              <input class="questionnaire-cat__input" id="questionnaire-cat-input-weight" type="number" name="number" placeholder="7">
             </li>
             <li class="questionnaire-cat__item">
-              <label class="questionnaire-cat-label" for="questionnaire-cat-input-age">Возраст (лет):</label>
-              <input class="questionnaire-cat-input" id="questionnaire-cat-input-age" type="number" name="number" placeholder="7">
+              <label class="questionnaire-cat__label" for="questionnaire-cat-label-age">Возраст (лет):</label>
+              <input class="questionnaire-cat__input" id="questionnaire-cat-input-age" type="number" name="number" placeholder="7">
             </li>
           </ul>
         </fieldset>
@@ -97,16 +97,16 @@
         <fieldset class="questionnaire-cat__cat-filter-radio">
           <ul class="questionnaire-cat__list">
             <li class="questionnaire-cat__item">
-              <input class="questionnaire-cat__filter-radio-input" name="radio-choice-1" type="radio" id="radio-1" checked>
-              <label class="questionnaire-cat__filter-radio-label" for="radio-1">Похудение</label>
+              <input class="questionnaire-cat__filter-radio-input" name="reduce-weight" type="radio" id="reduce-weight" checked>
+              <label class="questionnaire-cat__filter-radio-label" for="reduce-weight">Похудение</label>
             </li>
             <li class="questionnaire-cat__item">
-              <input class="questionnaire-cat__filter-radio-input" name="radio-choice-1" type="radio" id="radio-2">
-              <label class="questionnaire-cat__filter-radio-label" for="radio-2">Набор веса</label>
+              <input class="questionnaire-cat__filter-radio-input" name="gain-weight" type="radio" id="rgain-weight">
+              <label class="questionnaire-cat__filter-radio-label" for="gain-weight">Набор веса</label>
             </li>
             <li class="questionnaire-cat__item">
-              <input class="questionnaire-cat__filter-radio-input" name="radio-choice-1" type="radio" id="radio-3">
-              <label class="questionnaire-cat__filter-radio-label" for="radio-3">Не знаю (Нужен ваш совет)</label>
+              <input class="questionnaire-cat__filter-radio-input" name="need-advice" type="radio" id="need-advice">
+              <label class="questionnaire-cat__filter-radio-label" for="need-advice">Не знаю (Нужен ваш совет)</label>
             </li>
           </ul>
         </fieldset>
@@ -120,12 +120,12 @@
         <ul class="questionnaire-cat__list">
           <li class="questionnaire-cat__item">
             <label class="questionnaire-cat__label" for="form-input-email">E-mail:*</label>
-            <input class="questionnaire-cat__input" id="form-input-email" type="email" name="email" placeholder="kuklachev@gmail.com">
+            <input class="questionnaire-cat__input" id="form-input-email" type="email" name="name" placeholder="kuklachev@gmail.com">
           </li>
 
           <li class="questionnaire-cat__item">
             <label class="questionnaire-cat__label" for="form-input-tel">Телефон:*</label>
-            <input class="questionnaire-cat__input" id="form-input-tel" type="tel" name="tel" placeholder="8 (960) 900-60-90">
+            <input class="questionnaire-cat__input" id="form-input-tel" type="tel" name="phone" placeholder="8 (960) 900-60-90">
           </li>
         </ul>
       </fieldset>
@@ -140,20 +140,20 @@
         <legend class="questionnaire-cat__headding">Дополнительно</legend>
         <ul class="questionnaire-cat__list">
           <li class="questionnaire-cat__item">
-            <input class="questionnaire-cat__checkbox-input" name="products-1" type="checkbox" id="products-1" checked>
-            <label class="questionnaire-cat__checkbox-label" for="products-1">Сахарозаменитель</label>
+            <input class="questionnaire-cat__checkbox-input" name="sugar-substitute" type="checkbox" id="sugar-substitute" checked>
+            <label class="questionnaire-cat__checkbox-label" for="sugar-substitute">Сахарозаменитель</label>
           </li>
           <li class="questionnaire-cat__item">
-            <input class="questionnaire-cat__checkbox-input" name="products-2" type="checkbox" id="products-2">
-            <label class="questionnaire-cat__checkbox-label" for="products-2">Питьевая вода</label>
+            <input class="questionnaire-cat__checkbox-input" name="drinking-water" type="checkbox" id="drinking-water">
+            <label class="questionnaire-cat__checkbox-label" for="drinking-water">Питьевая вода</label>
           </li>
           <li class="questionnaire-cat__item">
-            <input class="questionnaire-cat__checkbox-input" name="products-3" type="checkbox" id="products-3" checked>
-            <label class="questionnaire-cat__checkbox-label" for="products-3">Молоко</label>
+            <input class="questionnaire-cat__checkbox-input" name="milk" type="checkbox" id="milk" checked>
+            <label class="questionnaire-cat__checkbox-label" for="milk">Молоко</label>
           </li>
           <li class="questionnaire-cat__item">
-            <input class="questionnaire-cat__checkbox-input" name="products-4" type="checkbox" id="products-4">
-            <label class="questionnaire-cat__checkbox-label" for="products-4">Витамины</label>
+            <input class="questionnaire-cat__checkbox-input" name="vitamine" type="checkbox" id="vitamine">
+            <label class="questionnaire-cat__checkbox-label" for="vitamine">Витамины</label>
           </li>
         </ul>
       </fieldset>
