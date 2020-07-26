@@ -1,0 +1,115 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+
+  padding: 0;
+
+  background-image: url(../img/index-can-mobile@1x.png),
+  url(../img/index-background-mobile@1x.jpg);
+  background-position: center top 167px, center top;
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 117px;
+    background-image: url(../img/index-can-tablet@1x.jpg);
+    background-position: center top 201px;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: @desktop-width) {
+  margin-bottom: 82px;
+  padding-left: 190px;
+  height: 531px;
+
+  background-image: url(../img/index-can-desktop@1x.png),
+  url(../img/index-background-desktop@1x.jpg);
+  background-position: center, right top;
+  background-repeat: no-repeat;
+  }
+}
+
+.hero__heading {
+  align-items: center;
+  margin: 0;
+  margin-right: 35px;
+  margin-left: 36px;
+  padding: 0;
+  padding-top: 27px;
+  width: 269px;
+
+  font-family: "Oswald";
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 36px;
+  color: @basic-white;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    color: @basic-black;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    margin-bottom: 40px;
+    width: 414px;
+    text-align: left;
+  }
+}
+
+.hero__text {
+  margin: 0;
+  padding: 0;
+  padding-top: 25px;
+  font-family: "Oswald";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  color: @basic-white;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    color: @basic-black;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 51px;
+    padding: 0;
+  }
+}
+.hero__button {
+  display: flex;
+  align-items: center;
+  margin-top: 302px;
+  padding-top: 13px;
+  padding-left: 75px;
+  padding-bottom: 13px;
+  padding-right: 73px;
+  background-color: @basic-green;
+  font-family: "Oswald";
+  text-transform: uppercase;
+  color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+   margin-top: 49px;
+   padding-top: 14px;
+   padding-left: 26px;
+   padding-bottom: 14px;
+   padding-right: 26px;
+  }
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding-top: 14px;
+    padding-left: 26px;
+    padding-bottom: 14px;
+    padding-right: 26px;
+  }
+}

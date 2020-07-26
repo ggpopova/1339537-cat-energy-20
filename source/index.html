@@ -4,7 +4,6 @@
 <head>
   <meta charset="utf-8">
   <title>Главная страница | Кэт энерджи</title>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -55,36 +54,43 @@
       </svg>
     </a>
 
-    <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-
-    <nav>
-      <ul class="page-header__menu">
-        <li class="page-header__item"><a class="page-header__link">Главная</a></li>
-        <li class="page-header__item"><a class="page-header__link" href="catalog.html">Каталог продукции</a></li>
-        <li class="page-header__item"><a class="page-header__link" href="form.html">Подбор программы</a></li>
-      </ul>
+    <nav class="menu-nav">
+      <button class="menu-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <div class="menu-nav__wrapper">
+        <ul class="menu-nav__menu">
+          <li class="menu-nav__item">
+            <a class="menu-nav__link--home">Главная</a>
+          </li>
+          <li class="menu-nav__item">
+            <a class="menu-nav-link--catalog" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="menu-nav__item">
+            <a class="menu-nav-link--form" href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
 
   <main>
     <h1 class="visually-hidden">Интернет-магазин функционального питания для котов "Cat Energy"</h1>
 
-    <section class="section-hero">
-      <h2 class="page__headding section-hero__heading">Функциональное питание для котов</h2>
-      <a class="section-hero__text">Занялся собой? Займись котом!</a>
-      <a class="section-hero__button generic-button" href="form.html">Подобрать программу</a>
+    <section class="hero">
+      <h2 class="hero__heading">Функциональное питание для котов</h2>
+      <a class="hero__text">Занялся собой? Займись котом!</a>
+      <a class="hero__button generic-button" href="form.html">Подобрать программу</a>
     </section>
 
     <section class="services">
       <h2 class="visually-hidden">Преимущества нашей компании</h2>
       <article class="services__item">
-        <h3 class="services__headding">Похудение</h3>
+        <h3 class="services__headding--icon-cat-slim">Похудение</h3>
         <p class="services__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
         <a class="services__button" href="#">Каталог Slim</a>
       </article>
 
       <article class="services__item">
-        <h3 class="services__headding">Набор массы</h3>
+        <h3 class="services__headding--icon-cat-pro">Набор массы</h3>
         <p class="services__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
         <a class="services__button" href="#">Каталог Pro</a>
       </article>
