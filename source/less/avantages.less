@@ -7,7 +7,7 @@
 .avantages__headding {
   display: flex;
   margin: 0;
-  margin-bottom: 38px;
+
   padding: 0;
 
   text-align: left;
@@ -16,6 +16,11 @@
   font-weight: 500;
   line-height: 40px;
   color: @basic-black;
+
+  @media (min-width: @mobile-width-only) {
+    margin: 0 auto;
+    margin-bottom: 38px;
+  }
 
   @media (min-width: @tablet-width) {
     margin: 0 auto;
@@ -68,4 +73,5 @@
 
 .avantages_description {
   margin: 0;
+  padding: 0;
 }

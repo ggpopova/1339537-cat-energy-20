@@ -1,0 +1,128 @@
+.sample {
+  display: grid;
+  justify-items: center;
+  background-color: @lightergrey;
+
+  @media (min-width: @mobile-width-only) {
+    justify-content: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.sample__info {
+
+  @media (min-width: @desktop-width) {
+    width: 436px;
+  }
+}
+
+.sample__headding {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Oswald";
+  font-weight: 500;
+  color: @basic-black;
+
+  @media (min-width: @mobile-width-only) {
+    font-size: 36px;
+    line-height: 40px;
+    padding-top: 27px;
+    padding-bottom: 33px;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    padding-bottom: 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 146px;
+  }
+}
+
+.sample__description {
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @mobile-width-only) {
+    width: 279px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 436px;
+  }
+}
+
+.sample__data {
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+
+  font-family: "Oswald";
+  color: @basic-black;
+
+  @media (min-width: @mobile-width-only) {
+    flex-direction: row;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 37px;
+  }
+}
+
+.sample__sample-data {
+
+  @media (min-width: @desktop-width) {
+    width: 162px;
+    height: 77px;
+    border: 1px solid red;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.sample__sale {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Oswald";
+  font-weight: 500;
+  color: @basic-black;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: @mobile-width-only) {
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 42px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 174px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+
+  }
+}
