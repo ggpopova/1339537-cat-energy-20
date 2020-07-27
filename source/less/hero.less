@@ -103,40 +103,22 @@
     padding-top: 40px;
   }
 }
-.hero__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  background-color: @basic-green;
-  font-family: "Oswald";
-  text-transform: uppercase;
-  color: @basic-white;
+.hero__button {
+   .generic-button& {}
+
 
   @media (min-width: @mobile-width-only) {
     width: 280px;
     margin-top: 302px;
-  padding-top: 13px;
-  padding-left: 15px;
-  padding-bottom: 13px;
-  padding-right: 15px;
-
   }
 
   @media (min-width: @tablet-width) {
     width: 244px;
-
     margin-top: 49px;
-    padding-top: 14px;
-    padding-left: 26px;
-    padding-bottom: 14px;
-    padding-right: 26px;
   }
+
   @media (min-width: @desktop-width) {
     margin: 0;
-    padding-top: 14px;
-    padding-left: 26px;
-    padding-bottom: 14px;
-    padding-right: 26px;
   }
 }
