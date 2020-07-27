@@ -1,7 +1,9 @@
 .page-header {
-  display: flex;
+
+
 
   @media (min-width: @mobile-width-only) {
+    display: flex;
     flex-direction: column;
   }
 
@@ -10,6 +12,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    position: absolute;
     flex-direction: row;
   }
 }
@@ -103,7 +106,7 @@
     padding-right: 15px;
 
     line-height: 30px;
-    
+
   }
 }
 
