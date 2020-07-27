@@ -32,7 +32,7 @@
     align-items: flex-start;
     margin-bottom: 82px;
     padding-left: 190px;
-    
+
     background-image: url(../img/index-can-desktop@1x.png),
       url(../img/index-background-desktop@1x.jpg);
     background-position: right 330px top 143px, right top;
@@ -46,7 +46,7 @@
   padding: 0;
 
   font-family: "Oswald";
-  font-weight: 500;
+  font-weight: normal;
 
   @media (min-width: @mobile-width-only) {
     width: 249px;
@@ -105,18 +105,27 @@
 }
 .hero__button {
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin-top: 302px;
-  padding-top: 13px;
-  padding-left: 75px;
-  padding-bottom: 13px;
-  padding-right: 73px;
+
   background-color: @basic-green;
   font-family: "Oswald";
   text-transform: uppercase;
   color: @basic-white;
 
+  @media (min-width: @mobile-width-only) {
+    width: 280px;
+    margin-top: 302px;
+  padding-top: 13px;
+  padding-left: 15px;
+  padding-bottom: 13px;
+  padding-right: 15px;
+
+  }
+
   @media (min-width: @tablet-width) {
+    width: 244px;
+
     margin-top: 49px;
     padding-top: 14px;
     padding-left: 26px;
