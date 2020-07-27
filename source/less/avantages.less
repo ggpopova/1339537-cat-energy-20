@@ -34,24 +34,28 @@
 
 .avantages__list {
   display: grid;
-  justify-content: center;
-  grid-gap: 22px;
   margin: 0;
   padding: 0;
+
+  @media (min-width: @mobile-width-only) {
+    justify-content: center;
+    row-gap: 20px;
+  }
+
 
   @media (min-width: @tablet-width) {
     grid-template-columns: repeat(2, 246px);
     justify-content: space-evenly;
-    grid-gap: 153px;
+    column-gap: 153px;
+    row-gap: 37px;
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: repeat(4, 230px);
-    grid-gap: 94px;
+    column-gap: 94px;
     margin: 0;
     padding: 0;
-
   }
 }
 
