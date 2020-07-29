@@ -1,6 +1,7 @@
 .page-header {
-
-
+  position: relative;
+  width: auto;
+  min-height: 66px;
 
   @media (min-width: @mobile-width-only) {
     display: flex;
@@ -17,142 +18,76 @@
   }
 }
 
-.menu-nav {
-  align-items: center;
-  font-family: "Oswald";
-  font-weight: 500;
-
-  @media (min-width: @mobile-width-only) {
-  }
-}
-
-.page-header__logo-icon {
-  height: 38px;
-
-  @media (min-width: @tablet-width) {
-    height: 52px;
-  }
-
-  @media (min-width: @desktop-width) {
-    height: 59px;
-  }
-}
-
-.menu-nav__wrapper {
+.page-header__wrapper {
   display: flex;
 
-  @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: row;
-    width: 440px;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: flex;
-    flex-direction: row;
-    width: 478px;
-  }
-}
-
-.menu-nav__menu {
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-
   @media (min-width: @mobile-width-only) {
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-
-.menu-nav__item {
-  display: flex;
-  justify-content: center;
-  padding-top: 22px;
-  padding-bottom: 21px;
-
-  text-transform: uppercase;
-
-  @media (min-width: @mobile-width-only) {
-
-    font-size: 20px;
-    line-height: 20px;
-
-    border-bottom: 1px solid @lightgrey;
-  }
-
-  @media (min-width: @desktop-width) {
-    color: @basic-white;
-  }
-}
-
-.manu-nav__link {
-  font-weight: 500;
-  font-family: "Oswald";
-}
-
-.menu-nav__link--home {
-  @media (min-width: @mobile-width-only) {
-    padding-left: 122px;
-    padding-right: 122px;
+    min-height: 66px;
+    padding: 12px 23px 16px 20px;
   }
 
   @media (min-width: @tablet-width) {
-    padding-left: 15px;
-    padding-right: 15px;
-
-    font-size: 18px;
-    list-style: 24px;
-    border: none;
+    min-height: 66px;
+    padding: 12px 23px 16px 20px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 15px;
-    padding-right: 15px;
-
-    line-height: 30px;
-
+    min-height: 66px;
+    padding: 12px 23px 16px 20px;
   }
 }
 
-.menu-nav__link--catalog {
+.menu-nav__toggle {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+  display: block;
+
+  cursor: pointer;
+  border: none;
+  background-color: @basic-white;
 
   @media (min-width: @mobile-width-only) {
-    padding-left: 69px;
-    padding-right: 70px;
-  }
-
-  @media (min-width: @tablet-width) {
-    padding-left: 15px;
-    padding-right: 15px;
-
-    font-size: 18px;
-    list-style: 24px;
-    border: none;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-left: 15px;
-    padding-right: 15px;
-
-    line-height: 30px;
-
   }
 }
 
-.menu-nav__link--form {
-  @media (min-width: @mobile-width-only) {
-    padding-left: 70px;
-    padding-right: 70px;
+.menu-nav--closed .menu-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0;
+  width: 24px;
+  height: 2px;
+  background-color: @basic-black;
+  box-shadow: 0 8px 0 0 @basic-black,
+    0 16px 0 0 @basic-black;
+}
+
+.menu-nav--opened .menu-nav__toggle {
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 25px;
+    height: 2px;
+    background-color: @basic-black;
   }
 
-  @media (min-width: @tablet-width) {
-    padding-left: 15px;
-    padding-right: 15px;
+  &::before {
+    transform: rotate(45deg);
   }
 
-  @media (min-width: @desktop-width) {
-    padding-left: 15px;
-    padding-right: 110px;
+  &::after {
+    transform: rotate(-45deg);
   }
 }
+
+// .menu-nav--closed + .menu-nav {
+//   @media (min-width: @mobile-width-only) {
+//     display: none;
+//   }
+// }

@@ -1,0 +1,131 @@
+// .menu-nav__wrapper {
+//   display: flex;
+
+//   @media (min-width: @tablet-width) {
+//     display: flex;
+//     flex-direction: row;
+//     width: 440px;
+//   }
+
+//   @media (min-width: @desktop-width) {
+//     display: flex;
+//     flex-direction: row;
+//     width: 478px;
+//   }
+// }
+
+// .menu-nav__menu {
+//   margin: 0;
+//   padding: 0;
+
+//   @media (min-width: @mobile-width-only) {
+//     flex-direction: column;
+//     justify-content: center;
+//   }
+// }
+
+// .menu-nav {
+//   position: relative;
+//   align-items: center;
+//   width: auto;
+//   min-height: 66px;
+//
+//   font-family: "Oswald";
+//   font-weight: 500;
+
+//   @media (min-width: @mobile-width-only) {
+//   }
+// }
+
+.menu-nav {
+  background-color: @basic-white;
+}
+
+.menu-nav__menu {
+  margin: 0;
+  padding: 0;
+}
+
+.menu-nav__item {
+  display: flex;
+
+  @media (min-width: @mobile-width-only) {
+    justify-content: center;
+    align-items: center;
+    min-height: 68px;
+
+    font-size: 20px;
+    line-height: 20px;
+    border-top: 1px solid @lightgrey;
+    border-bottom: 1px solid @lightgrey;
+  }
+
+  @media (min-width: @tablet-width) {
+    color: @basic-white;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: @basic-white;
+  }
+}
+
+.menu-nav__link {
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+
+  font-family: "Oswald";
+  text-transform: uppercase;
+
+  @media (min-width: @mobile-width-only) {
+    font-weight: 500;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 30px;
+    border: none;
+  }
+}
+
+// .menu-nav__link--home {
+// }
+
+// .menu-nav__link--catalog {
+//   @media (min-width: @tablet-width) {
+//     padding-left: 15px;
+//     padding-right: 15px;
+
+//     font-size: 18px;
+//     list-style: 24px;
+//     border: none;
+//   }
+
+//   @media (min-width: @desktop-width) {
+//     padding-left: 15px;
+//     padding-right: 15px;
+
+//     line-height: 30px;
+//   }
+// }
+
+// .menu-nav__link--form {
+
+//   @media (min-width: @tablet-width) {
+//     padding-left: 15px;
+//     padding-right: 15px;
+//   }
+
+//   @media (min-width: @desktop-width) {
+//     padding-left: 15px;
+//     padding-right: 110px;
+//   }
+// }
