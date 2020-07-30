@@ -1,0 +1,35 @@
+.map {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 53px;
+    height: 50px;
+    background-image: url("../img/map-pin.png");
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: @mobile-width) {
+    width: 320px;
+    height: 362px;
+    background-color: @basic-grey;
+    background-image: url("../img/bg-map-mobile@1x.png");
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    height: 400px;
+
+    background-color: @basic-grey;
+    background-image: url("../img/bg-map-tablet@1x.png");
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    height: 400px;
+
+    background-color: @basic-grey;
+    background-image: url("../img/bg-map-desktop@1x.png");
+  }
+}

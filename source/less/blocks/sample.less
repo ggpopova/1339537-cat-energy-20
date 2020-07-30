@@ -2,7 +2,7 @@
   display: grid;
   justify-items: center;
 
-  @media (min-width: @mobile-width-only) {
+  @media (min-width: @mobile-width) {
     justify-content: center;
     background-color: @lightergrey;
   }
@@ -18,7 +18,7 @@
 }
 
 .sample__info {
-  @media (min-width: @mobile-width-only) {
+  @media (min-width: @mobile-width) {
     margin-left: 20px;
     margin-right: 21px;
   }
@@ -37,11 +37,11 @@
 .sample__headding {
   margin: 0 auto;
   padding: 0;
-  font-family: "Oswald";
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 500;
   color: @basic-black;
 
-  @media (min-width: @mobile-width-only) {
+  @media (min-width: @mobile-width) {
     margin-bottom: 33px;
     padding-top: 27px;
 
@@ -66,7 +66,7 @@
   padding: 0;
   text-align: left;
 
-  @media (min-width: @mobile-width-only) {
+  @media (min-width: @mobile-width) {
     width: 279px;
     margin-bottom: 25px;
 
@@ -94,16 +94,13 @@
 .sample__sample-price-wrapper {
   display: grid;
 
-  @media (min-width: @mobile-width-only) {
+  @media (min-width: @mobile-width) {
     grid-template-columns: 2fr 1fr;
     column-gap: 31px;
   }
 
   @media (min-width: @tablet-width) {
     margin-bottom: 59px;
-  }
-
-  @media (min-width: @desktop-width) {
   }
 }
 
@@ -117,7 +114,7 @@
   border-radius: 2px;
   text-align: center;
 
-  @media (min-width: @mobile-width-only) {
+  @media (min-width: @mobile-width) {
     width: 124px;
     height: 64px;
     margin-bottom: 26px;
@@ -139,11 +136,11 @@
   margin: 0;
   padding: 0;
 
-  font-family: Oswald;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   color: black;
 
-  @media (min-width: @mobile-width-only) {
+  @media (min-width: @mobile-width) {
     margin-top: 14px;
 
     font-size: 24px;
@@ -168,11 +165,9 @@
   padding: 0;
 
   color: @basic-grey;
-  font-family: Arial;
-  font-style: normal;
   background-color: @lightergrey;
 
-  @media (min-width: @mobile-width-only) {
+  @media (min-width: @mobile-width) {
     width: 57px;
     margin-top: 14px;
 
@@ -184,7 +179,6 @@
     width: 140px;
 
     background-color: @basic-white;
-    font-size: 14px;
     line-height: 14px;
   }
 
@@ -199,10 +193,10 @@
 //   margin: 0 auto;
 //   padding: 0;
 
-//   font-family: "Oswald";
+//   font-family: "Oswald", "Arial", sans-serif;
 //   color: @basic-black;
 
-//   @media (min-width: @mobile-width-only) {
+//   @media (min-width: @mobile-width) {
 //     flex-direction: row;
 //     justify-content: center;
 //     font-size: 24px;
@@ -233,15 +227,15 @@
 }
 
 .sample__sale {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
-  font-family: "Oswald";
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 500;
   color: @basic-black;
   text-transform: uppercase;
   text-align: center;
 
-  @media (min-width: @mobile-width-only) {
+  @media (min-width: @mobile-width) {
     font-size: 14px;
     line-height: 20px;
     padding-bottom: 42px;
@@ -252,15 +246,9 @@
     font-size: 20px;
     line-height: 20px;
   }
-
-  @media (min-width: @desktop-width) {
-  }
 }
 
 .sample__slider {
-  margin: 0;
-  padding: 0;
-
   @media (min-width: @tablet-width) {
     text-align: center;
     background-image: linear-gradient(@basic-white 30%, @lightergrey 0%);

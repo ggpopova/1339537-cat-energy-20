@@ -1,31 +1,26 @@
 .avantages {
   display: grid;
-  margin: 0 auto;
   margin-bottom: 42px;
 }
 
 .avantages__headding {
   display: flex;
   margin: 0;
-
   padding: 0;
 
   text-align: left;
-  font-family: "Oswald";
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 36px;
   font-weight: 500;
   line-height: 40px;
   color: @basic-black;
 
-  @media (min-width: @mobile-width-only) {
-    margin: 0 auto;
+  @media (min-width: @mobile-width) {
     margin-bottom: 38px;
   }
 
   @media (min-width: @tablet-width) {
-    margin: 0 auto;
     margin-bottom: 32px;
-
     font-size: 36px;
     font-weight: 500;
     line-height: 40px;
@@ -34,14 +29,12 @@
 
 .avantages__list {
   display: grid;
-  margin: 0;
-  padding: 0;
+  .reset-list();
 
-  @media (min-width: @mobile-width-only) {
+  @media (min-width: @mobile-width) {
     justify-content: center;
     row-gap: 20px;
   }
-
 
   @media (min-width: @tablet-width) {
     grid-template-columns: repeat(2, 246px);
@@ -54,8 +47,6 @@
     display: grid;
     grid-template-columns: repeat(4, 230px);
     column-gap: 94px;
-    margin: 0;
-    padding: 0;
   }
 }
 

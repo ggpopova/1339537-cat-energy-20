@@ -2,7 +2,7 @@
   display: flex;
   background-color: @darkgrey;
 
-  @media (min-width: @mobile-width-only) {
+  @media (min-width: @mobile-width) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -26,7 +26,7 @@
 .footer__logo {
   color: @lightestblack;
 
-  @media (min-width: @mobile-width-only) {
+  @media (min-width: @mobile-width) {
     margin-top: 39px;
     margin-bottom: 32px;
   }
@@ -37,10 +37,9 @@
   justify-content: space-between;
   align-items: center;
   width: 129px;
-  margin: 0;
-  padding: 0;
+  .reset-list();
 
-  @media (min-width: @mobile-width-only) {
+  @media (min-width: @mobile-width) {
     position: relative;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -76,7 +75,7 @@
 .copyright {
   display: flex;
 
-  @media (min-width: @mobile-width-only) {
+  @media (min-width: @mobile-width) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
