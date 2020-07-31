@@ -1,7 +1,6 @@
 .page-header {
   position: relative;
   width: auto;
-  min-height: 66px;
 
   @media (min-width: @mobile-width) {
     display: flex;
@@ -22,12 +21,12 @@
   display: flex;
 
   @media (min-width: @mobile-width) {
-    min-height: 66px;
+    height: 66px;
     padding: 12px 23px 16px 20px;
   }
 
   @media (min-width: @tablet-width) {
-    min-height: 66px;
+    height: 66px;
     padding: 12px 23px 16px 20px;
   }
 
@@ -38,16 +37,22 @@
 }
 
 .menu-nav__toggle {
-  position: absolute;
-  top: 25px;
-  right: 20px;
-  width: 24px;
-  height: 24px;
-  display: block;
+  @media (min-width: @mobile-width) {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    display: block;
+    width: 24px;
+    height: 16px;
 
-  cursor: pointer;
-  border: none;
-  background-color: @basic-white;
+    cursor: pointer;
+    border: none;
+    background-color: @basic-white;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .menu-nav--closed .menu-nav__toggle::before {
@@ -58,8 +63,7 @@
   width: 24px;
   height: 2px;
   background-color: @basic-black;
-  box-shadow: 0 8px 0 0 @basic-black,
-    0 16px 0 0 @basic-black;
+  box-shadow: 0 8px 0 0 @basic-black, 0 16px 0 0 @basic-black;
 }
 
 .menu-nav--opened .menu-nav__toggle {
@@ -81,9 +85,3 @@
     transform: rotate(-45deg);
   }
 }
-
-// .menu-nav--closed + .menu-nav {
-//   @media (min-width:@mobile-width) {
-//     display: none;
-//   }
-// }
