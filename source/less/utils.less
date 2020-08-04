@@ -1,0 +1,43 @@
+//Global
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: @basic-white;
+  color: @basic-grey;
+  font-family: "Arial", "PT Sans Narrow", sans-serif;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: @basic-black;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Mix
+.reset-list() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.line {
+  position: absolute;
+  top: 50%;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: @basic-green;
+}
