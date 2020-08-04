@@ -1,97 +1,125 @@
 .additional-products {
-  @media (min-width: @mobile-width) {
-    margin: 0 auto;
-    margin-bottom: 57px;
+  display: flex;
+  flex-direction: column;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.additional-products__heading {
+  position: relative;
+  margin: 0;
+  margin-bottom: 35px;
+
+  background-color: @basic-white;
+
+  &::before {
+    .line();
   }
 
   @media (min-width: @tablet-width) {
-    width: 708px;
-    margin: 0 auto;
-    margin-bottom: 69px;
+    margin-bottom: 61px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 896px;
-    height: 288px;
-    margin-bottom: 86px;
+    margin-bottom: 80px;
   }
 }
 
-.additional-products__heading--line {
-  margin: 0 auto;
+.additional-products__text {
+  position: relative;
+  padding-left: 19px;
+  padding-right: 22px;
+
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
 
-  @media (min-width: @mobile-width) {
-    font-size: 24px;
-    line-height: 24px;
-    padding-left: 20px;
-    padding-right: 22px;
-  }
+  background-color: @basic-white;
 
   @media (min-width: @tablet-width) {
-    font-size: 36px;
-    line-height: 36px;
-    margin-bottom: 80px;
+    margin-left: 30px;
     padding-left: 37px;
     padding-right: 36px;
+
+    font-size: 36px;
+    line-height: 36px;
   }
 
   @media (min-width: @desktop-width) {
-    font-family: "Oswald", "Arial", sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 36px;
+    margin-left: 70px;
     padding-left: 40px;
     padding-right: 35px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.additional-products__wrapper {
+  display: grid;
+  margin: 0 auto;
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+    row-gap: 69px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 2fr 1fr;
+    column-gap: 80px;
+    margin-bottom: 86px;
   }
 }
 
 .additional-products__list {
   display: grid;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   .reset-list();
 
-  @media (min-width: @mobile-width) {
-    border: 1px solid #cdcdcd;
+  @media (min-width: @desktop-width) {
+    border: none;
   }
-
-  // @media (min-width: @tablet-width) {
-  // }
-
-  // @media (min-width: @desktop-width) {
-  // }
 }
 
 .additional-products__item {
-  margin: 0 auto;
-
-  @media (min-width: @mobile-width) {
-    width: 280px;
-    padding-top: 13px;
-    padding-bottom: 19px;
-    border-top: 1px solid @darkergrey;
-    border-bottom: 1px solid @darkergrey;
-  }
+  width: 280px;
+  margin: 0;
+  padding-top: 13px;
+  padding-bottom: 19px;
+  border-top: 1px solid @darkergrey;
+  border-bottom: 1px solid @darkergrey;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 708px;
-    height: 140px;
     padding: 26px 37px 28px 38px;
+
     font-size: 16px;
     line-height: 20px;
-    border: none;
-    border-bottom: 1px solid #cdcdcd;
+
+    border: 1px solid #cdcdcd;
   }
 
-  // @media (min-width: @desktop-width) {
-  // }
+  @media (min-width: @desktop-width) {
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+
+    padding-top: 15px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 17px;
+
+    border: none;
+    border-top: 1px solid @darkergrey;
+    border-bottom: 1px solid @darkergrey;
+  }
 }
 
 .additional-products__title {
@@ -126,13 +154,16 @@
   }
 }
 
-.additional-products__characteristic tr {
+.additional-products__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
   font-family: "Arial", "PT Sans Narrow", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
 
   @media (min-width: @mobile-width) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     width: 280px;
     line-height: 14px;
   }
@@ -143,32 +174,84 @@
   }
 }
 
-.additional-products__button {
-  display: block;
-  margin: 0 auto;
-  background-color: #68b738;
-  font-family: "Oswald", "Arial", sans-serif;
-  font-weight: normal;
-  text-align: center;
-  color: white;
+.additional-products__price {
+  line-height: 14px;
   text-transform: uppercase;
 
   @media (min-width: @mobile-width) {
-    width: 280px;
-    height: 39px;
-    padding: 9px 44px 9px 44px;
     font-size: 16px;
+    line-height: 20px;
   }
+}
+
+.additional-products__button {
+  display: block;
+  text-align: center;
+  width: 280px;
+  margin: 0 auto;
+  padding: 9px 44px 9px 44px;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: white;
+  text-transform: uppercase;
+
+  background-color: @basic-green;
 
   @media (min-width: @tablet-width) {
     margin-top: 20px;
     width: 633px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 244px;
+    margin: 0;
+  }
 }
 
-// @media (min-width: @tablet-width) {
-//   border: 1px solid @darkergrey;
-// }
+.additional-products__stock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 280px;
+  height: 289px;
+  background-color: @basic-green;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
 
-// @media (min-width: @desktop-width) {}
-//
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 708px;
+    height: 200px;
+    background-color: @basic-green;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    width: 245px;
+    height: 289px;
+    background-color: @basic-green;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+  }
+}
+
+.additional-products__tock--slogan {
+  width: 161px;
+  font-size: 16px;
+  line-height: 20px;
+  color: @basic-white;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+  }
+}

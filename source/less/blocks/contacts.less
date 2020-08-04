@@ -1,17 +1,27 @@
 .contacts {
   display: grid;
+  max-width: 1220px;
+  margin: 0 auto;
+
   grid-template-columns: 1fr 1fr;
-  justify-items: center;
-  align-items: center;
 
-  // @media (min-width:@mobile-width) {
-  // }
+  @media (min-width: @mobile-width) {
+    justify-items: center;
+    padding: 28px 19px 22px 19px;
+    background-color: @darkgrey;
+  }
 
-  // @media (min-width: @tablet-width) {
-  // }
+  @media (min-width: @tablet-width) {
+    padding: 62px 72px 58px 71px;
+    background-color: @darkgrey;
+  }
 
-  // @media (min-width: @desktop-width) {
-  // }
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    padding: 63px 89px 51px 76px;
+    background-color: @basic-white;
+    border: 1px solid red;
+  }
 }
 
 .contacts__text {

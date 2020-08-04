@@ -1,4 +1,5 @@
 .map {
+  margin: 0;
   position: relative;
 
   &::before {
@@ -18,7 +19,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: 768px;
+    width: auto;
     height: 400px;
 
     background-color: @basic-grey;
@@ -26,10 +27,14 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 1440px;
+    width: auto;
     height: 400px;
 
     background-color: @basic-grey;
     background-image: url("../img/bg-map-desktop@1x.png");
   }
+}
+
+.map__address {
+  margin: 0;
 }
