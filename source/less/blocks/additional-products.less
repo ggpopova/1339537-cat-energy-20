@@ -1,20 +1,26 @@
 .additional-products {
+  position: relative;
   display: flex;
   flex-direction: column;
-  max-width: 1220px;
   margin: 0 auto;
+  border-top: solid 2px green;
 }
 
 .additional-products__heading {
+  grid-column: span 2;
   position: relative;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 35px;
+  padding-left: 19px;
+  padding-right: 22px;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
 
   background-color: @basic-white;
-
-  &::before {
-    .line();
-  }
 
   @media (min-width: @tablet-width) {
     margin-bottom: 61px;
@@ -25,40 +31,30 @@
   }
 }
 
-.additional-products__text {
-  position: relative;
-  padding-left: 19px;
-  padding-right: 22px;
+// .additional-products__text {
 
-  font-family: @font-face, "Arial", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 24px;
+//   @media (min-width: @tablet-width) {
+//     margin-left: 30px;
+//     padding-left: 37px;
+//     padding-right: 36px;
 
-  background-color: @basic-white;
+//     font-size: 36px;
+//     line-height: 36px;
+//   }
 
-  @media (min-width: @tablet-width) {
-    margin-left: 30px;
-    padding-left: 37px;
-    padding-right: 36px;
+//   @media (min-width: @desktop-width) {
+//     margin-left: 70px;
+//     padding-left: 40px;
+//     padding-right: 35px;
 
-    font-size: 36px;
-    line-height: 36px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-left: 70px;
-    padding-left: 40px;
-    padding-right: 35px;
-
-    font-size: 36px;
-    line-height: 36px;
-  }
-}
+//     font-size: 36px;
+//     line-height: 36px;
+//   }
+// }
 
 .additional-products__wrapper {
   display: grid;
+  max-width: 1220px;
   margin: 0 auto;
   margin-bottom: 35px;
 
@@ -125,7 +121,7 @@
 .additional-products__title {
   margin: 0;
 
-  font-family: @font-face, "Arial", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
 
@@ -191,7 +187,7 @@
   margin: 0 auto;
   padding: 9px 44px 9px 44px;
 
-  font-family: @font-face, "Arial", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: normal;
   color: white;
@@ -240,7 +236,7 @@
   }
 }
 
-.additional-products__tock--slogan {
+.additional-products__stock--slogan {
   width: 161px;
   font-size: 16px;
   line-height: 20px;

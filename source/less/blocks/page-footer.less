@@ -39,6 +39,7 @@
   width: 129px;
   margin: 0;
   padding: 0;
+  .reset-list();
 
   @media (min-width: @mobile-width) {
     position: relative;
@@ -63,6 +64,13 @@
       background-color: @lighrsgrey;
       bottom: 45px;
       left: -80px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before,
+    &::after {
+      display: none;
     }
   }
 }
