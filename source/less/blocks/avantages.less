@@ -1,29 +1,44 @@
 .avantages {
   display: grid;
   margin-bottom: 42px;
+  padding-left: 20px;
+  padding-right: 21px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 47px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 11px;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
 }
 
 .avantages__heading {
-  display: flex;
   margin: 0;
-  padding: 0;
+  margin-bottom: 38px;
 
-  text-align: left;
   font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
   font-size: 36px;
-  font-weight: 500;
   line-height: 40px;
-  color: @basic-black;
-
-  @media (min-width: @mobile-width) {
-    margin-bottom: 38px;
-  }
 
   @media (min-width: @tablet-width) {
     margin-bottom: 32px;
-    font-size: 36px;
-    font-weight: 500;
-    line-height: 40px;
+
+    text-align: left;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-size: 60px;
+    line-height: 60px;
+    color: @basic-black;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 30px;
   }
 }
 
