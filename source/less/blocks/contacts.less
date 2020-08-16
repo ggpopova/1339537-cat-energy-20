@@ -86,10 +86,19 @@
   }
 }
 
+.contacts__address br {
+  @media (min-width: @mobile-width) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+  }
+}
+
 .contacts__map {
   margin: 0;
   background-color: @grey-dark;
-
 
   // &::before {
   //   content: "";
@@ -110,7 +119,6 @@
   @media (min-width: @tablet-width) {
     width: auto;
     height: 400px;
-
 
     background-image: url("../img/bg-map-tablet@1x.png");
   }

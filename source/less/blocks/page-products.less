@@ -1,15 +1,43 @@
 .products {
-  display: flex;
-  flex-direction: column;
-  padding-left: 20px;
+  margin-bottom: 28px;
+  padding-left: 19px;
   padding-right: 20px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 30px;
-    padding-right: 30px;
+    margin-bottom: 68px;
+    padding-left: 31px;
+    padding-right: 29px;
   }
 
   @media (min-width: @desktop-width) {
+    margin-bottom: 75px;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}
+
+.page__heading {
+  margin-bottom: 37px;
+  padding-left: 19px;
+  padding-right: 20px;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 54px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 56px;
     padding-left: 110px;
     padding-right: 110px;
   }
@@ -24,23 +52,16 @@
   row-gap: 20px;
 
   flex-grow: 1;
-  margin-bottom: 28px;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
-    // margin-left: 30px;
-    // margin-right: 30px;
-    margin-bottom: 68px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
     row-gap: 64px;
-    // margin-left: 40px;
-    // margin-right: 40px;
-    margin-bottom: 75px;
   }
 }
 
