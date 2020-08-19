@@ -14,33 +14,24 @@
     left: 0;
     width: 320px;
     height: 304px;
+    margin-bottom: 22px;
     background-color: #68b738;
-    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-image: url("../img/index-can-mobile@1x.png"),
+      url("../img/index-background-mobile@1x.jpg");
     background-position: center;
     background-repeat: no-repeat;
   }
 
-  @media (min-width: @mobile-width) {
-    margin-bottom: 22px;
-
-    // background-image: url("../img/index-can-mobile@1x.png"),
-    //   url("../img/index-background-mobile@1x.jpg");
-    // background-position: center top 167px, center top;
-    // background-repeat: no-repeat;
-  }
-
   @media (min-width: @tablet-width) {
-    margin-bottom: 0;
-    padding-top: 61px;
-    padding-left: 117px;
-    padding-right: 237px;
-
-    background-image: url("../img/index-can-tablet@1x.jpg");
-    background-position: center top 201px;
-    background-repeat: no-repeat;
-
     &::before {
-      display: none;
+      margin-bottom: 0;
+      padding-top: 61px;
+      padding-left: 117px;
+      padding-right: 237px;
+
+      background-image: url("../img/index-can-tablet@1x.jpg");
+      background-position: center top 201px;
+      background-repeat: no-repeat;
     }
   }
 

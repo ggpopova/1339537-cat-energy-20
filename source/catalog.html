@@ -13,33 +13,37 @@
 
   <div class="container">
     <header class="page-header">
-
-      <!-- <div class="page-header__wrapper menu-nav--closed menu-nav-nojs"> -->
       <a class="page-header__logo" aria-label="Логотип интернет-магазина CAT ENERGY">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Кэт энерджи">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Кэт энерджи" width="192" height="38">
+        </picture>
       </a>
-      <!-- </div> -->
-      <nav class="menu-nav">
-        <button class="page-header menu-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span>
+
+      <nav class="menu-nav menu-nav--closed menu-nav-nojs">
+        <button class="menu-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="menu-nav__menu">
-          <li class="menu-nav__item">
-            <a class="menu-nav__link" href="index.html">Главная</a>
-          </li>
-          <li class="menu-nav__item">
-            <a class="menu-nav__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="menu-nav__item">
-            <a class="menu-nav__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
+        <div class="menu-nav__wrapper">
+          <ul class="menu-nav__menu">
+            <li class="menu-nav__item">
+              <a class="menu-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="menu-nav__item">
+              <a class="menu-nav__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="menu-nav__item">
+              <a class="menu-nav__link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
       </nav>
 
     </header>
   </div>
 
   <main class="page-products">
-    <h1 class="page__heading container">Каталог продукции</h1>
+    <h1 class="page-main__header container">Каталог продукции</h1>
     <section class="products container">
       <ul class="products__list">
         <li class="products__item">
@@ -238,8 +242,8 @@
 
     <section class="additional-products">
       <div class="additional-products__block container">
-      <h2 class="additional-products__heading">Дополнительные товары</h2>
-    </div>
+        <h2 class="additional-products__heading">Дополнительные товары</h2>
+      </div>
 
       <div class="additional-products__wrapper container">
         <ul class="additional-products__list">
@@ -327,7 +331,7 @@
     <div class="page-footer__wrapper container">
       <a class="page-footer__logo page-footer__logo--link">
         <img class="page-footer__logo-image" width="128px" height="24px">
-        <!-- <svg class="footer__logo" width="128" height="24" viewBox="0 0 128 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="footer__logo" width="128" height="24" viewBox="0 0 128 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g>
           <path d="M1.60253 22.0513C0.468358 20.3682 -0.0946573 18.3503 3.016e-05 16.3077V7.79487C-0.137317 5.73031 0.390444 3.67661 1.50238 1.94872C2.6041 0.615385 4.30676 0 6.81067 0C9.31458 0 10.9171 0.615385 11.9187 1.74359C13.006 3.17255 13.5409 4.96181 13.421 6.76923V8.82051H8.51333V6.46154C8.55297 5.76385 8.45065 5.06533 8.21286 4.41026C8.08576 4.14583 7.88431 3.9264 7.63443 3.78018C7.38455 3.63395 7.09766 3.56763 6.81067 3.58974C6.10958 3.58974 5.60879 3.79487 5.40848 4.30769C5.18191 5.03643 5.08025 5.79984 5.10801 6.5641V17.5385C5.05512 18.2799 5.19327 19.0227 5.50864 19.6923C5.70895 20.2051 6.20973 20.4103 6.91083 20.4103C7.61192 20.4103 8.01255 20.2051 8.21286 19.6923C8.44058 18.9992 8.54242 18.2692 8.51333 17.5385V15.0769H13.421V17.1282C13.5229 18.9651 12.9911 20.7803 11.9187 22.2564C10.9171 23.4872 9.21443 24.1026 6.81067 24.1026C4.40692 24 2.6041 23.3846 1.60253 22.0513Z" fill="#111111" />
           <path d="M19.3302 0.307617H25.0391L29.2457 23.6922H24.6385L23.8372 18.7692H20.5321L19.7308 23.6922H15.0235L19.3302 0.307617ZM23.4366 15.6922L22.2347 6.56403L21.0329 15.6922H23.4366Z" fill="#111111" />
@@ -344,7 +348,7 @@
             <rect width="128" height="24" fill="white" />
           </clipPath>
         </defs>
-      </svg> -->
+      </svg>
       </a>
 
       <div class="page-footer__social social">
@@ -396,6 +400,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>

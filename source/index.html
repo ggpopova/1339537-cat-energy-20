@@ -13,27 +13,30 @@
 
   <div class="container">
     <header class="page-header">
-
-      <!-- <div class="page-header__wrapper menu-nav--closed menu-nav-nojs"> -->
-          <!-- </div> -->
       <a class="page-header__logo" aria-label="Логотип интернет-магазина CAT ENERGY">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Кэт энерджи">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Кэт энерджи" width="192" height="38">
+        </picture>
       </a>
 
-      <nav class="menu-nav">
-        <button class="page-header menu-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span>
+      <nav class="menu-nav menu-nav--closed menu-nav-nojs">
+        <button class="menu-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="menu-nav__menu">
-          <li class="menu-nav__item">
-            <a class="menu-nav__link menu-nav__link--white" href="index.html">Главная</a>
-          </li>
-          <li class="menu-nav__item">
-            <a class="menu-nav__link menu-nav__link--white" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="menu-nav__item">
-            <a class="menu-nav__link menu-nav__link--white" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
+        <div class="menu-nav__wrapper">
+          <ul class="menu-nav__menu">
+            <li class="menu-nav__item">
+              <a class="menu-nav__link menu-nav__link--white" href="index.html">Главная</a>
+            </li>
+            <li class="menu-nav__item">
+              <a class="menu-nav__link menu-nav__link--white" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="menu-nav__item">
+              <a class="menu-nav__link menu-nav__link--white" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
       </nav>
 
     </header>
@@ -207,6 +210,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>
