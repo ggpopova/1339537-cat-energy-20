@@ -50,9 +50,8 @@ exports.default = gulp.series(styles, server, watcher);
 // Image
 
 const imagemin = require("gulp-imagemin");
-
-exports.default = () => {
-  gulp
-    .src("sourse/img/**/*.{jpg,png,svg}")
+const images = () => {
+  return gulp
+    .src("source/img/**/*.{jpg,png,svg}")
     .pipe(imagemin([imagemin.optipng({ optimizationLevel: 3 })]));
 };
