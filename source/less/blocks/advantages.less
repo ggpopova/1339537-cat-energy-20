@@ -1,4 +1,4 @@
-.avantages {
+.advantages {
   display: grid;
   margin-bottom: 42px;
   padding-left: 20px;
@@ -17,7 +17,7 @@
   }
 }
 
-.avantages__heading {
+.advantages__heading {
   margin: 0;
   margin-bottom: 38px;
 
@@ -28,7 +28,7 @@
   line-height: 40px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 32px;
+    margin-bottom: 72px;
 
     text-align: left;
     font-family: "Oswald", "Arial", sans-serif;
@@ -36,18 +36,15 @@
     line-height: 60px;
     color: @basic-black;
   }
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 32px;
-  }
 }
 
-.avantages__list {
+.advantages__list {
   display: grid;
   .reset-list();
+  counter-reset: itemNum;
 
   @media (min-width: @mobile-width) {
-    justify-content: center;
+    justify-content: space-between;
     row-gap: 20px;
   }
 
@@ -65,14 +62,34 @@
   }
 }
 
-.avantages__item {
+.advantages__item {
+  display: flex;
+  align-items: center;
   width: 279px;
   height: 60px;
-  padding-left: 80px;
+  margin-bottom: 16px;
 
   @media (min-width: @tablet-width) {
+    flex-direction: column;
+    align-items: start;
+    position: relative;
     width: 230px;
     height: 280px;
+
+    &::after {
+      counter-increment: itemNum;
+      content: counter(itemNum);
+      position: absolute;
+      z-index: -1;
+      top: -40px;
+      left: 120px;
+      width: 70px;
+      height: 230px;
+      font-family: "Oswald", "Arial", sans-serif;
+      font-size: 281px;
+      line-height: 281px;
+      color: @grey-dark;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -81,7 +98,29 @@
   }
 }
 
-.avantages_description {
+.advantages__description {
   margin: 0;
   padding: 0;
+  color: @basic-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.advantages__image {
+  margin-right: 20px;
+  background-color: @basic-green;
+  padding: 14px 15px;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 31px;
+    padding-top: 25px;
+    padding-right: 26px;
+    padding-bottom: 23px;
+    padding-left: 24px;
+  }
 }

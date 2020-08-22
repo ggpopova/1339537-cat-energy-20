@@ -8,9 +8,12 @@ const imagemin = require("gulp-imagemin");
 const gulpWebp = require("gulp-webp");
 const rename = require("gulp-rename");
 const svgstore = require("gulp-svgstore");
+const posthtml = require("gulp-posthtml");
+const include = require("posthtml-include");
 const csso = require("gulp-csso");
 const sync = require("browser-sync").create();
 const del = require("del");
+const terser = require("gulp-terser");
 
 // Preprocessor
 
@@ -20,7 +23,9 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(less())
-    .pipe(postcss([autoprefixer()]))
+    .pipe(postcss([
+      autoprefixer()
+    ]))
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
@@ -46,14 +51,40 @@ const server = (done) => {
 
 exports.server = server;
 
+const reload = (done) => {
+  sync.reload();
+  done();
+};
+
+const scripts = () => {
+  return gulp.src("source/js/script.js")
+    .pipe(terser())
+    .pipe(rename({
+      suffix: `.min`
+    }))
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
+};
+
+exports.scripts = scripts;
+
+const html = () => {
+
+};
+
+exports.html = html;
+
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch(`source/less/**/*.less`, gulp.series(styles, reload));
+  gulp.watch(`source/*.html`, gulp.series(copy, reload));
+  gulp.watch(`source/js/script.js`, gulp.series(scripts, reload));
 };
 
-exports.default = gulp.series(styles, server, watcher);
+exports.default = gulp.series(
+  styles, server, watcher
+);
 
 // Image
 
@@ -102,7 +133,6 @@ const copy = () => {
       [
         "source/fonts/**/*.{woff,woff2}",
         "source/img/**",
-        "source/js/**",
         "source/*.ico",
         "source/*.html",
       ],
@@ -123,11 +153,20 @@ const clean = () => {
 
 exports.clean = clean;
 
-const build = () => gulp.series (
-  "clean",
-  "copy",
-  "styles",
-  "sprite"
-);
+const build = (done) => gulp.series (
+  clean,
+  copy,
+  styles,
+  scripts,
+  // html,
+)(done);
 
 exports.build = build;
+
+const start = () => gulp.series (
+  build,
+  server,
+  watcher
+)();
+
+exports.start = start;
