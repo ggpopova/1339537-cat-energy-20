@@ -99,16 +99,35 @@
 .contacts__map {
   margin: 0;
   background-color: @grey-dark;
-
 }
 
-.map{
+.map {
   width: 100%;
   min-height: 362px;
   margin: 0;
-  padding: 0;
+  background-image: url(/img/bg-map-mobile@1x.png);
 
   @media (min-width: @tablet-width) {
     min-height: 400px;
+  }
+}
+
+contacts__map {
+  position: relative;
+  width: auto;
+  height: 400px;
+  background-image: url(/img/bg-map-desktop@1x.png);
+
+  @media (min-width: 768px) {
+    width: auto;
+    height: 400px;
+    background-image: url(/img/bg-map-tablet@1x.png);
+  }
+
+  @media (min-width: 1440px) {
+    position: relative;
+    width: auto;
+    height: 400px;
+    background-image: url(/img/bg-map-desktop@1x.png);
   }
 }
