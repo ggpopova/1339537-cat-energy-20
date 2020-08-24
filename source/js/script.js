@@ -13,3 +13,27 @@ menuNavToggle.addEventListener('click', function() {
     menuNav.classList.remove('menu-nav--opened');
   }
 });
+
+//map
+
+document.addEventListener("DOMContentLoaded", function() {
+  var mapEl = document.querySelector('#map');
+
+  if (mapEl) {
+    ymaps.ready(init);
+   var map;
+   function init() {
+       map = new ymaps.Map("map", {
+           center: [59.938635, 30.323118],
+           zoom: 14,
+           controls: []
+       });
+       var placemark = new ymaps.Placemark([59.938635, 30.323118], {}, {
+           iconLayout: "default#image",
+           iconImageHref: "/img/map-pin.png",
+           iconImageSize: [113, 106]
+       });
+       map.geoObjects.add(placemark);
+   }
+  }
+});
