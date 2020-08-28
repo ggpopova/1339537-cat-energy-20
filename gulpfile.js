@@ -95,7 +95,7 @@ const images = () => {
       imagemin([
         imagemin.optipng({ optimizationLevel: 3 }),
         imagemin.jpegtran({ progressive: true }),
-        imagemin.svgo(),
+        // imagemin.svgo(),
       ])
     );
 };
@@ -158,6 +158,7 @@ const build = (done) => gulp.series (
   copy,
   styles,
   scripts,
+  sprite,
   // html,
 )(done);
 

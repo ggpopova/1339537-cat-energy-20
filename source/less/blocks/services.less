@@ -183,7 +183,7 @@
   @media (min-width: @mobile-width) {
     width: 227px;
     line-height: 18px;
-    border-bottom: 1px solid @grey-darkest;
+    border-bottom: 1px solid @grey-lightest;
   }
 
   @media (min-width: @tablet-width) {
@@ -202,33 +202,46 @@
 }
 
 .services__button {
-  position: relative;
+  display: flex;
+  align-items: center;
 
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
   text-transform: uppercase;
 
-  &::before {
-    content: "";
-    position: absolute;
-    left: 100px;
-    bottom: 3px;
-    width: 32px;
-    height: 10px;
-    background-image: url("../img/icon-right-arrow-long.svg");
-    background-repeat: no-repeat;
+  &:hover .icon-right-arrow-long {
+    display: none;
+  }
 
-    font-size: 16px;
-    line-height: 16px;
+  &:hover .icon-right-arrow-verylong {
+    display: initial;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
-
-    &::before {
-      top: 8px;
-      left: 120px;
-    }
   }
+}
+
+.icon-right-arrow-long,
+.icon-right-arrow-verylong {
+  margin-left: 17px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 28px;
+  }
+}
+
+.icon-right-arrow-verylong {
+  display: none;
 }

@@ -31,7 +31,6 @@
     margin-bottom: 72px;
 
     text-align: left;
-    font-family: "Oswald", "Arial", sans-serif;
     font-size: 60px;
     line-height: 60px;
     color: @basic-black;
@@ -110,17 +109,22 @@
 }
 
 .advantages__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 50px;
+
+  height: 50px;
   margin-right: 20px;
   background-color: @basic-green;
-  padding: 14px 15px;
 
   @media (min-width: @tablet-width) {
     width: 80px;
     height: 80px;
     margin-bottom: 31px;
-    padding-top: 25px;
-    padding-right: 26px;
-    padding-bottom: 23px;
-    padding-left: 24px;
   }
+}
+
+.advantages__image img {
+  max-width: max-content;
 }

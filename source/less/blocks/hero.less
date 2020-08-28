@@ -16,10 +16,15 @@
     width: 320px;
     height: 304px;
 
-    background-color: #68b738;
+    background-color: @basic-green;
     background-image: url("../img/index-background-mobile@1x.jpg");
     background-position: center;
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+      background-size: 320px auto;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -48,11 +53,14 @@
       right: 0;
       width: 720px;
       height: 696px;
-      background-color: #68b738;
 
       background-image: url("../img/index-background-desktop@1x.jpg");
-      background-position: top 201px;
       background-repeat: no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+        background-size: 720px auto;
+      }
     }
   }
 }
@@ -118,13 +126,12 @@
 
 .hero__image {
   position: relative;
-  width: auto;
-  height: auto;
 
   @media (min-width: @tablet-width) {
     position: initial;
     z-index: -1;
     left: -36px;
+    width: 709px;
   }
 
   @media (min-width: @desktop-width) {
