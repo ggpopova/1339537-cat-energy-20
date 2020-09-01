@@ -3,12 +3,11 @@
   margin-bottom: 39px;
   padding-right: 20px;
   padding-left: 20px;
-
-  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
+  font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
@@ -35,8 +34,8 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 80px;
     margin-bottom: 69px;
-    padding-left: 110px;
     padding-right: 110px;
+    padding-left: 110px;
   }
 }
 
@@ -44,7 +43,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-
+  margin: 0 auto;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -54,7 +53,6 @@
   color: @basic-grey;
 
   .reset-list();
-  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -64,14 +62,14 @@
 
 .form-cat-data {
   margin-bottom: 48px;
-  padding-left: 19px;
   padding-right: 20px;
+  padding-left: 19px;
 
   @media (min-width: @tablet-width) {
     width: 100%;
     margin-bottom: 72px;
-    padding-left: 71px;
     padding-right: 67px;
+    padding-left: 71px;
   }
 
   @media (min-width: @desktop-width) {
@@ -94,8 +92,7 @@
   display: flex;
   margin-bottom: 13px;
   align-items: center;
-
-  color: #444444;
+  color: @basic-grey;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 20px;
@@ -104,12 +101,11 @@
 
 .form__label {
   margin-right: 10px;
-
-  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
+  font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
@@ -127,18 +123,23 @@
 
 .form__input-text {
   flex-grow: 1;
-  padding: 7px 10px;
-
-  font-family: "Oswald", "Arial", sans-serif;
+  padding-top: 7px;
+  padding-right: 10px;
+  padding-bottom: 7px;
+  padding-left: 10px;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
-  text-transform: uppercase;
+  font-family: "Oswald", "Arial", sans-serif;
   color: @basic-grey;
+  text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    padding: 10px 14px;
+    padding-top: 10px;
+    padding-right: 14px;
+    padding-bottom: 10px;
+    padding-left: 14px;
   }
 }
 
@@ -146,18 +147,17 @@
   position: relative;
   margin: 0;
   padding: 0;
-
   border: none;
 
   &::after {
     content: "";
     position: absolute;
-    width: 100%;
     top: 15px;
     right: 0;
+    z-index: -1;
+    width: 100%;
     height: 2px;
     background-color: @basic-green;
-    z-index: -1;
   }
 
   @media (min-width: @tablet-width) {
@@ -174,13 +174,13 @@
 }
 
 .form__legend {
-  font-family: "Oswald", "Arial", sans-serif;
+  margin-right: auto;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
   line-height: 26px;
+  font-family: "Oswald", "Arial", sans-serif;
   background-color: white;
-  margin-right: auto;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
@@ -188,8 +188,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 40px;
     padding-right: 40px;
+    padding-left: 40px;
   }
 }
 
@@ -208,20 +208,20 @@
 .form__legend--owner {
   margin-right: 99px;
   margin-bottom: 32px;
-  padding-left: 19px;
   padding-right: 15px;
+  padding-left: 19px;
 
   @media (min-width: @tablet-width) {
     margin-left: 30px;
     margin-bottom: 76px;
-    padding-left: 39px;
     padding-right: 42px;
+    padding-left: 39px;
   }
 
   @media (min-width: @desktop-width) {
     margin-left: 70px;
-    padding-left: 40px;
     padding-right: 40px;
+    padding-left: 40px;
   }
 }
 
@@ -230,21 +230,21 @@
 }
 
 .form__list--contacts {
-  padding-left: 19px;
   padding-right: 20px;
+  padding-left: 19px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 71px;
     padding-right: 65px;
+    padding-left: 71px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    flex-direction: row;
     align-items: baseline;
-    padding-left: 110px;
     padding-right: 110px;
+    padding-left: 110px;
   }
 }
 
@@ -260,22 +260,21 @@
 
 .icon-mail {
   position: absolute;
-
-  right: 8px;
   top: 10px;
+  right: 8px;
 
   &:active {
     fill: @basic-green;
   }
 
   @media (min-width: @tablet-width) {
-    right: 17px;
     top: 11px;
+    right: 17px;
   }
 
   @media (min-width: @desktop-width) {
-    left: 520px;
     top: 19px;
+    left: 520px;
   }
 }
 
@@ -285,86 +284,83 @@
 
 .icon-phone {
   position: absolute;
-  right: 8px;
   top: 10px;
+  right: 8px;
 
   &:active {
     fill: @basic-green;
   }
 
   @media (min-width: @tablet-width) {
-    right: 17px;
     top: 11px;
+    right: 17px;
   }
 
   @media (min-width: @desktop-width) {
-    right: 26px;
     top: 15px;
+    right: 26px;
   }
 }
 
 .form__input-text:invalid .icon-mail {
-  fill: red;
+  fill: @border-error;
 }
 
 .form__legend--comments {
-  padding-left: 19px;
-  padding-right: 22px;
   margin-bottom: 34px;
+  padding-right: 22px;
+  padding-left: 19px;
 
   @media (min-width: @tablet-width) {
     margin-left: 30px;
     margin-bottom: 76px;
-    padding-left: 39px;
     padding-right: 42px;
+    padding-left: 39px;
   }
 
   @media (min-width: @desktop-width) {
     margin-left: 70px;
-    padding-left: 40px;
     padding-right: 40px;
+    padding-left: 40px;
   }
 }
 
 .form__textarea {
-  margin-left: 20px;
   margin-right: 20px;
+  margin-left: 20px;
   padding-top: 13px;
   padding-right: 12px;
-  padding-left: 19px;
   padding-bottom: 13px;
-
-  font-family: "Oswald", "Arial", sans-serif;
+  padding-left: 19px;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
+  font-family: "Oswald", "Arial", sans-serif;
   color: @basic-grey;
   text-transform: uppercase;
-
   resize: none;
 
   @media (min-width: @tablet-width) {
-    margin-left: 70px;
     margin-right: 67px;
+    margin-left: 70px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 110px;
     margin-right: 110px;
+    margin-left: 110px;
   }
 }
 
 .form__list-border-wrapper {
   margin-bottom: 28px;
   padding: 0;
-
   border: 1px solid @border-grey;
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    margin-left: 71px;
     margin-right: 68px;
+    margin-left: 71px;
   }
 
   @media (min-width: @desktop-width) {
@@ -397,21 +393,20 @@
 }
 
 .form__list--mass .form__label--radio {
+  position: relative;
   display: flex;
   align-items: center;
-  position: relative;
   margin-right: 10px;
   margin-bottom: 19px;
   padding-left: 50px;
-
   color: @form-grey;
 
   &::before {
     content: "";
     position: absolute;
+    left: 0;
     width: 30px;
     height: 30px;
-    left: 0;
     border: 1px solid @grey-darker;
     border-radius: 50%;
   }
@@ -432,9 +427,9 @@
 .form__input-radio:checked + .form__label--radio::after {
   content: "";
   position: absolute;
+  left: 9px;
   width: 13px;
   height: 13px;
-  left: 9px;
   background-color: @basic-green;
   border-radius: 50%;
 }
@@ -466,47 +461,47 @@
 }
 
 .form__legend--additional {
-  padding-left: 19px;
   padding-right: 24px;
   margin-bottom: 34px;
+  padding-left: 19px;
 
   @media (min-width: @tablet-width) {
-    margin-left: 30px;
     margin-bottom: 57px;
-    padding-left: 40px;
+    margin-left: 30px;
     padding-right: 41px;
+    padding-left: 40px;
   }
 
   @media (min-width: @desktop-width) {
     margin-left: 70px;
-    padding-left: 40px;
     padding-right: 40px;
+    padding-left: 40px;
   }
 }
 
 .form__list--additional {
   display: grid;
-  padding-left: 20px;
   padding-right: 20px;
+  padding-left: 20px;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
     row-gap: 20px;
-    padding-left: 70px;
     padding-right: 70px;
+    padding-left: 70px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
-    margin-left: 40px;
     margin-right: 40px;
+    margin-left: 40px;
   }
 }
 
 .form__label--checkbox {
+  position: relative;
   display: flex;
   align-items: center;
-  position: relative;
   margin-right: 10px;
   margin-bottom: 19px;
   padding-left: 50px;
@@ -514,9 +509,9 @@
   &::before {
     content: "";
     position: absolute;
+    left: 0;
     width: 30px;
     height: 30px;
-    left: 0;
     border: 1px solid @grey-darker;
   }
 
@@ -551,37 +546,39 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 32px;
-  padding-left: 20px;
   padding-right: 20px;
+  padding-left: 20px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     align-items: center;
     margin-bottom: 72px;
-    padding-left: 70px;
     padding-right: 68px;
+    padding-left: 70px;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0 auto;
     margin-bottom: 81px;
-    padding-left: 110px;
     padding-right: 110px;
+    padding-left: 110px;
   }
 }
 
 .form__button {
   margin-bottom: 21px;
-  padding: 14px 44px;
-
-  font-family: "Oswald", "Arial", sans-serif;
+  padding-top: 14px;
+  padding-right: 45px;
+  padding-bottom: 14px;
+  padding-left: 45px;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
+  font-family: "Oswald", "Arial", sans-serif;
   text-align: center;
-  text-transform: uppercase;
   color: @basic-white;
+  text-transform: uppercase;
   background-color: @basic-green;
   border: none;
 
@@ -589,7 +586,6 @@
     min-width: 282px;
     margin: 0;
     margin-right: 68px;
-    padding: 14px 45px;
     font-size: 20px;
   }
 
@@ -606,8 +602,8 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    text-align: left;
     font-size: 16px;
     line-height: 16px;
+    text-align: left;
   }
 }

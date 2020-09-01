@@ -4,84 +4,72 @@
   align-items: center;
 
   @media (min-width: @mobile-width) {
-    justify-items: center;
-
-    padding: 28px 19px 22px 19px;
-    // background-color: @grey-dark;
+    padding-top: 28px;
+    padding-right: 19px;
+    padding-bottom: 22px;
+    padding-left: 19px;
   }
 
   @media (min-width: @tablet-width) {
-    padding: 62px 72px 59px 71px;
-    // background-color: @grey-dark;
+    padding-top: 62px;
+    padding-right: 72px;
+    padding-bottom: 59px;
+    padding-left: 71px;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
+    right: 50%;
     z-index: 1;
     width: 570px;
-    padding: 63px 89px 51px 76px;
-    background-color: @basic-white;
     margin-top: 95px;
-    right: 50%;
+    padding-top: 63px;
+    padding-right: 89px;
+    padding-bottom: 51px;
+    padding-left: 76px;
+    background-color: @basic-white;
   }
 }
 
 .contacts__text {
   margin: 0;
-  padding: 0;
-
-  font-family: "Oswald", "Arial", sans-serif;
   font-weight: normal;
-  text-transform: uppercase;
+  font-family: "Oswald", "Arial", sans-serif;
   color: @black-lightest;
+  text-transform: uppercase;
 
   @media (min-width: @mobile-width) {
     width: 140px;
-
     font-size: 16px;
     line-height: 18px;
   }
 
   @media (min-width: @tablet-width) {
     width: 171px;
-
     font-size: 20px;
     line-height: 21px;
   }
 
   @media (min-width: @desktop-width) {
     width: 163px;
-
-    font-size: 20px;
-    line-height: 21px;
   }
 }
 
 .contacts__address {
+  width: 140px;
   font-style: normal;
   font-weight: normal;
+  line-height: 20px;
   color: @basic-grey;
-
-  @media (min-width: @mobile-width) {
-    width: 140px;
-
-    font-size: 14px;
-    line-height: 20px;
-  }
 
   @media (min-width: @tablet-width) {
     width: 159px;
-
     font-size: 16px;
-    line-height: 20px;
     text-align: right;
   }
 
   @media (min-width: @desktop-width) {
     width: 155px;
-
-    font-size: 16px;
-    line-height: 20px;
     text-align: left;
   }
 }
@@ -97,23 +85,19 @@
 }
 
 .contacts__map {
-  margin: 0;
   background-color: @grey-dark;
 }
 
 .map {
   width: 100%;
+  min-height: 362px;
+  margin: 0;
+  background-color: @grey-lightest;
+  background-image: url("../img/bg-map-mobile@1x.png");
 
-  @media (min-width: @mobile-width) {
-    min-height: 362px;
-    margin: 0;
-    background-color: @grey-lightest;
-    background-image: url("../img/bg-map-mobile@1x.png");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/bg-map-mobile@2x.png");
-      background-size: 100% auto;
-    }
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-map-mobile@2x.png");
+    background-size: 100% auto;
   }
 
   @media (min-width: @tablet-width) {

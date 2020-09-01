@@ -155,24 +155,32 @@
           </div>
         </div>
 
-        <div class="sample__slider">
-          <div class="sample__cat-1">
-            <img class="" src="https://via.placeholder.com/311x232" width="311" height="232" alt="1">
-          </div>
+      <div class="sample__slider">
+        <div class="slider-cat">
+        <div class="slider__before">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+            <img class="" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Кот до прохождения программы похудения">
+          </picture>
+        </div>
 
-          <!-- <div class="sample__cat-2 displayed">
-          <img class="" src="https://via.placeholder.com/251x240" width="251" height="240" alt="Кот после прохождения прогармм">
-          <a class="sample__button slider-link" href="#">Открыть каталог</a>
-        </div> -->
-
-          <div class="sample__slider promo-slider-radio-group">
-            <input class="#" type="radio" name="promo-slider-button" id="promo-slider-radio-button-1">
-            <label class="#" for="promo-slider-radio-button-1">Было</label>
-            <input class="#" type="radio" name="promo-slider-button" id="promo-slider-radio-button-2" checked>
-            <label class="#" for="promo-slider-radio-button-2">Стало</label>
-          </div>
+        <div class="slider__after slider-cat--displayed">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+            <img class="" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Кот после прохождения программы похудения">
+          </picture>
         </div>
       </div>
+        <div class="slider-radio-group">
+          <a class="slider__text">Было</a>
+          <input class="slider__input" type="radio" name="slider-slider-button" id="slider-slider-radio-button-1">
+          <label class="slider__label" for="slider-slider-radio-button-1"></label>
+          <a class="slider__text">Стало</a>
+        </div>
+      </div>
+
     </section>
 
     <section class="contacts">
