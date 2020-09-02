@@ -1,49 +1,48 @@
 .additional-products {
   position: relative;
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 35px;
+  // display: flex;
+  // flex-direction: column;
 
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     top: 14px;
     right: 0;
     z-index: -1;
-    width: 100%;
-    height: 3px;
+    width: 50%;
+    height: 2px;
     background-color: @basic-green;
   }
-}
-
-.additional-products__block {
-  margin-left: 0;
-  margin-right: auto;
 
   @media (min-width: @tablet-width) {
-    margin-left: 30px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-left: 70px;
+    &::before {
+      width: 100%;
+    }
   }
 }
 
 .additional-products__heading {
-  position: relative;
-  grid-column: span 2;
-  margin: 0;
+  display: inline-block;
+  margin-top: 0;
+  margin-right: 0;
   margin-bottom: 35px;
-  padding-left: 19px;
+  margin-left: 0;
+  padding-top: 0;
   padding-right: 22px;
-  font-style: normal;
-  font-weight: normal;
+  padding-bottom: 0;
+  padding-left: 20px;
   font-size: 24px;
   line-height: 24px;
+  font-weight: normal;
   font-family: "Oswald", "Arial", sans-serif;
   background-color: @basic-white;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 80px;
+    top: -8px;
+    grid-column: span 2;
+    width: 415px;
+    margin-left: 30px;
     padding-left: 37px;
     padding-right: 36px;
     font-size: 36px;
@@ -51,27 +50,26 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 81px;
-    padding-left: 40px;
+    margin-left: 70px;
     padding-right: 35px;
+    padding-left: 40px;
   }
 }
 
 .additional-products__wrapper {
   display: grid;
-  margin-bottom: 35px;
+
   padding-left: 20px;
   padding-right: 20px;
 
   @media (min-width: @tablet-width) {
     row-gap: 69px;
-    margin-bottom: 76px;
-    padding-left: 30px;
+    padding-left: 31px;
     padding-right: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 896px 245px;
+    grid-template-columns: 1fr 1fr;
     column-gap: 80px;
     margin-bottom: 86px;
     padding-left: 110px;
@@ -81,11 +79,16 @@
 
 .additional-products__list {
   display: grid;
-  margin: 0;
   padding: 0;
   .reset-list();
+  margin-bottom: 39px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 
   @media (min-width: @desktop-width) {
+    width: 895px;
     border: none;
   }
 }
