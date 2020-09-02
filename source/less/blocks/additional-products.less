@@ -1,88 +1,75 @@
 .additional-products {
   position: relative;
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 35px;
+  // display: flex;
+  // flex-direction: column;
 
-  &::after {
+  &::before {
     content: "";
     position: absolute;
-    width: 100%;
     top: 14px;
     right: 0;
-    height: 3px;
-    background-color: @basic-green;
     z-index: -1;
+    width: 50%;
+    height: 2px;
+    background-color: @basic-green;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      width: 100%;
+    }
   }
 }
 
 .additional-products__heading {
-  grid-column: span 2;
-  position: relative;
-  margin: 0;
+  display: inline-block;
+  margin-top: 0;
+  margin-right: 0;
   margin-bottom: 35px;
-  padding-left: 19px;
+  margin-left: 0;
+  padding-top: 0;
   padding-right: 22px;
-
-  font-family: "Oswald", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: normal;
+  padding-bottom: 0;
+  padding-left: 20px;
   font-size: 24px;
   line-height: 24px;
-
+  font-weight: normal;
+  font-family: "Oswald", "Arial", sans-serif;
   background-color: @basic-white;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 80px;
+    top: -8px;
+    grid-column: span 2;
+    width: 415px;
+    margin-left: 30px;
     padding-left: 37px;
     padding-right: 36px;
-
     font-size: 36px;
     line-height: 36px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 81px;
-    padding-left: 40px;
+    margin-left: 70px;
     padding-right: 35px;
+    padding-left: 40px;
   }
 }
 
-// .additional-products__text {
-
-//   @media (min-width: @tablet-width) {
-//     margin-left: 30px;
-//     padding-left: 37px;
-//     padding-right: 36px;
-
-//     font-size: 36px;
-//     line-height: 36px;
-//   }
-
-//   @media (min-width: @desktop-width) {
-//     margin-left: 70px;
-//     padding-left: 40px;
-//     padding-right: 35px;
-
-//     font-size: 36px;
-//     line-height: 36px;
-//   }
-// }
-
 .additional-products__wrapper {
   display: grid;
-  margin-bottom: 35px;
+
   padding-left: 20px;
   padding-right: 20px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 76px;
-    padding-left: 30px;
-    padding-right: 30px;
     row-gap: 69px;
+    padding-left: 31px;
+    padding-right: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 896px 245px;
+    grid-template-columns: 1fr 1fr;
     column-gap: 80px;
     margin-bottom: 86px;
     padding-left: 110px;
@@ -92,11 +79,16 @@
 
 .additional-products__list {
   display: grid;
-  margin: 0;
   padding: 0;
   .reset-list();
+  margin-bottom: 39px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 
   @media (min-width: @desktop-width) {
+    width: 895px;
     border: none;
   }
 }
@@ -115,23 +107,19 @@
     justify-content: space-between;
     width: 708px;
     padding: 26px 37px 28px 38px;
-
     font-size: 16px;
     line-height: 20px;
-
-    border: 1px solid #cdcdcd;
+    border: 1px solid @grey-darker;
   }
 
   @media (min-width: @desktop-width) {
     justify-content: space-between;
     align-items: center;
     width: auto;
-
     padding-top: 15px;
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 17px;
-
     border: none;
     border-top: 1px solid @grey-darker;
     border-bottom: 1px solid @grey-darker;
@@ -140,23 +128,25 @@
 
 .additional-products__title {
   margin: 0;
-
-  font-family: "Oswald", "Arial", sans-serif;
+  margin-bottom: 13px;
   font-style: normal;
   font-weight: normal;
-
-  @media (min-width: @mobile-width) {
-    margin-bottom: 13px;
-
-    font-size: 16px;
-    line-height: 16px;
-    text-transform: uppercase;
-  }
+  font-size: 16px;
+  line-height: 16px;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
+    flex-grow: 1;
+    margin: 0;
     font-size: 20px;
     line-height: 20px;
-    margin: 0;
+  }
+}
+
+.additional-products__table {
+  @media (min-width: @desktop-width) {
+    margin-right: 40px;
   }
 }
 
@@ -174,10 +164,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
-  font-family: "Arial", "PT Sans Narrow", sans-serif;
   font-size: 14px;
   line-height: 20px;
+  font-family: "Arial", "PT Sans Narrow", sans-serif;
 
   @media (min-width: @mobile-width) {
     width: 280px;
@@ -202,17 +191,18 @@
 
 .additional-products__button {
   display: block;
-  text-align: center;
   width: 280px;
   margin: 0 auto;
-  padding: 9px 44px 9px 44px;
-
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: 16px;
+  padding-top: 9px;
+  padding-left: 44px;
+  padding-bottom: 9px;
+  padding-right: 44px;
   font-weight: normal;
-  color: white;
+  font-size: 16px;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-align: center;
+  color: @basic-white;
   text-transform: uppercase;
-
   background-color: @basic-green;
 
   @media (min-width: @tablet-width) {
@@ -229,40 +219,60 @@
 .additional-products__stock {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  margin: 0 auto;
   width: 280px;
   height: 289px;
+  margin: 0 auto;
+  padding-top: 48px;
   background-color: @basic-green;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+    background-size: 280px auto;
+  }
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-around;
     width: 708px;
     height: 200px;
-    background-color: @basic-green;
+    padding-top: 0;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+      background-size: 708px auto;
+    }
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: column;
     width: 245px;
     height: 289px;
-    background-color: @basic-green;
+    padding-top: 42px;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+      background-size: 245px auto;
+    }
   }
+}
+
+.stock__icon-gift {
+  fill: @basic-white;
 }
 
 .additional-products__stock--slogan {
   width: 161px;
+  font-weight: normal;
   font-size: 16px;
   line-height: 20px;
-  font-weight: normal;
-  color: @basic-white;
   text-align: center;
+  color: @basic-white;
 
   @media (min-width: @tablet-width) {
     text-align: left;

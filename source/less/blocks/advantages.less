@@ -1,0 +1,128 @@
+.advantages {
+  display: grid;
+  margin-bottom: 42px;
+  padding-left: 20px;
+  padding-right: 21px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 47px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}
+
+.advantages__heading {
+  margin: 0;
+  margin-bottom: 38px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 40px;
+  font-family: "Oswald", "Arial", sans-serif;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 72px;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    color: @basic-black;
+  }
+}
+
+.advantages__list {
+  display: grid;
+  counter-reset: itemNum;
+  .reset-list();
+
+  @media (min-width: @mobile-width) {
+    justify-content: space-between;
+    row-gap: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: repeat(2, 246px);
+    justify-content: space-evenly;
+    column-gap: 153px;
+    row-gap: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 230px);
+    column-gap: 94px;
+  }
+}
+
+.advantages__item {
+  display: flex;
+  align-items: center;
+  width: 279px;
+  height: 60px;
+  margin-bottom: 16px;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    flex-direction: column;
+    align-items: start;
+    width: 230px;
+    height: 280px;
+    margin: 0;
+
+    &::after {
+      counter-increment: itemNum;
+      content: counter(itemNum);
+      position: absolute;
+      top: -40px;
+      left: 120px;
+      z-index: -1;
+      width: 70px;
+      height: 230px;
+      font-size: 280px;
+      line-height: 280px;
+      font-family: "Oswald", "Arial", sans-serif;
+      color: @grey-dark;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
+}
+
+.advantages__description {
+  margin: 0;
+  padding: 0;
+  color: @basic-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.advantages__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  background-color: @basic-green;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 31px;
+  }
+}
+
+.advantages__image img {
+  max-width: max-content;
+}
