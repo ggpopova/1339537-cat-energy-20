@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Подбор программы | CAT ENERGY - интернет-магазин</title>
   <link href="css/style.min.css" rel="stylesheet">
-  <script src=https://api-maps.yandex.ru/2.1/?lang=ru_RU></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -53,15 +53,15 @@
         <ul class="form__list form-cat-data container">
           <li class="form__item">
             <label class="form__label" for="form-name">Имя:*</label>
-            <input class="form__input-text" id="forme-name" type="text" name="name" placeholder="Барсик">
+            <input class="form__input-text" id="form-name" type="text" name="name" placeholder="Барсик">
           </li>
           <li class="form__item">
-            <label class="form__label" for="form-input-weight">Вес (кг):*</label>
-            <input class="form__input-text" id="form-input-weight" type="number" name="number" placeholder="7">
+            <label class="form__label" for="form-weight">Вес (кг):*</label>
+            <input class="form__input-text" id="form-weight" type="number" name="number" placeholder="7">
           </li>
           <li class="form__item">
-            <label class="form__label" for="form-label-age">Возраст (лет):</label>
-            <input class="form__input-text" id="form-input-age" type="number" name="number" placeholder="7">
+            <label class="form__label" for="form-age">Возраст (лет):</label>
+            <input class="form__input-text" id="form-age" type="number" name="number" placeholder="7">
           </li>
         </ul>
 
@@ -86,27 +86,23 @@
 
       <fieldset class="form__fieldset">
         <div class="form__fieldset--owner container">
-          <legend class="form__legend form__legend--owner">Контактные данные (владельца кота)</legend>
+          <h2 class="form__legend form__legend--owner">Контактные данные (владельца кота)</h2>
 
           <ul class="form__list form__list--contacts">
             <li class="form__item form__item--icon-mail">
               <label class="form__label form__label--email" for="form-email">E-mail:*</label>
               <input class="form__input-text form__input-text--email" id="form-email" type="email" name="name" placeholder="kuklachev@gmail.com">
-              <picture>
-                <svg class="icon-mail" width="17" height="13" viewBox="0 0 17 13">
+                <svg class="icon-mail" width="17" height="13">
                   <use xlink:href="img/sprite.svg#icon-mail"></use>
                 </svg>
-              </picture>
             </li>
 
             <li class="form__item form__item--phone">
               <label class="form__label form__label--phone" for="form-phone">Телефон:*</label>
               <input class="form__input-text form__input-text--phone" id="form-phone" type="tel" name="phone" placeholder="8 (960) 900-60-90">
-              <picture>
-                <svg class="icon-phone" width="20" height="20" viewBox="0 0 20 20">
+                <svg class="icon-phone" width="20" height="20">
                   <use xlink:href="img/sprite.svg#icon-phone"></use>
                 </svg>
-              </picture>
             </li>
           </ul>
         </div>
@@ -115,7 +111,7 @@
 
       <fieldset class="form__fieldset">
         <div class="form__fieldset--comments container">
-          <legend class="form__legend form__legend--comments">Комментарий</legend>
+          <h2 class="form__legend form__legend--comments">Комментарий</h2>
           <textarea class="form__textarea" name="comments" rows="7" cols="30" placeholder="Расскажите обо всех повaдках кота"></textarea>
         </div>
       </fieldset>
@@ -123,7 +119,7 @@
       <fieldset class="form__fieldset">
 
         <div class="form__fieldset--additional container">
-          <legend class="form__legend form__legend--additional">Дополнительно</legend>
+          <h2 class="form__legend form__legend--additional">Дополнительно</h2>
           <ul class="form__list form__list--additional container">
             <li class="form__item">
               <input class="form__input--checkbox visually-hidden" name="form-additional" type="checkbox" id="sweetener" checked>

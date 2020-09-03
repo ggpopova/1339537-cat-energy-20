@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Главная страница | Кэт энерджи</title>
   <link href="css/style.min.css" rel="stylesheet">
-  <script src=https://api-maps.yandex.ru/2.1/?lang=ru_RU></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -95,20 +95,20 @@
       <h2 class="advantages__heading">Как это работает</h2>
       <ul class="advantages__list">
         <li class="advantages__item">
-          <picture class="advantages__image">
+          <div class="advantages__image">
             <svg width="30" height="32">
               <use xlink:href="img/sprite.svg#icon-leaf"></use>
             </svg>
-          </picture>
+          </div>
           <p class="advantages__description">Функциональное питание содержит только полезные питательные вещества.</p>
         </li>
 
         <li class="advantages__item">
-          <picture class="advantages__image">
+          <div class="advantages__image">
             <svg width="29" height="31">
               <use xlink:href="img/sprite.svg#icon-tub"></use>
             </svg>
-          </picture>
+          </div>
           <p class="advantages__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
           </p>
         </li>
@@ -125,11 +125,11 @@
 
         <li class="advantages__item">
 
-          <span class="advantages__image">
+          <div class="advantages__image">
             <svg width="32" height="32">
               <use xlink:href="img/sprite.svg#icon-alarm"></use>
             </svg>
-          </span>
+          </div>
           <p class="advantages__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
         </li>
       </ul>
@@ -151,7 +151,7 @@
                 <p class="sample-item__title">затрачено времени</p>
               </li>
             </ul>
-            <p class="sample__sale">Затраты на питание: <span class="sample__sale--value">15 000 руб.</p>
+            <p class="sample__sale">Затраты на питание: <span class="sample__sale--value">15 000 руб.</span></p>
           </div>
         </div>
 
@@ -164,6 +164,7 @@
             <img class="" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Кот до прохождения программы похудения">
           </picture>
         </div>
+
 
         <div class="slider__after slider-cat--displayed">
           <picture>
@@ -180,7 +181,7 @@
           <a class="slider__text" href="#">Стало</a>
         </div>
       </div>
-
+    </div>
     </section>
 
     <section class="contacts">
@@ -192,6 +193,7 @@
         <div id="map" class="map"></div>
       </div>
     </section>
+
   </main>
 
   <footer class="page-footer">
