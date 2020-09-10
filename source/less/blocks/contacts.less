@@ -1,87 +1,72 @@
+.contacts {
+  background-color: @grey-dark;
+}
+
 .contacts__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  @media (min-width: @mobile-width) {
-    justify-items: center;
-
-    padding: 28px 19px 22px 19px;
-    // background-color: @grey-dark;
-  }
+  padding-top: 28px;
+  padding-right: 19px;
+  padding-bottom: 27px;
+  padding-left: 19px;
 
   @media (min-width: @tablet-width) {
-    padding: 62px 72px 59px 71px;
-    // background-color: @grey-dark;
+    padding-top: 62px;
+    padding-right: 72px;
+    padding-bottom: 59px;
+    padding-left: 71px;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
+    right: 53%;
     z-index: 1;
     width: 570px;
-    padding: 63px 89px 51px 76px;
-    background-color: @basic-white;
     margin-top: 95px;
-    right: 50%;
+    padding-top: 63px;
+    padding-right: 86px;
+    padding-bottom: 57px;
+    padding-left: 79px;
+    background-color: @basic-white;
   }
 }
 
 .contacts__text {
+  width: 140px;
   margin: 0;
-  padding: 0;
-
-  font-family: "Oswald", "Arial", sans-serif;
   font-weight: normal;
-  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Oswald", "Arial", sans-serif;
   color: @black-lightest;
-
-  @media (min-width: @mobile-width) {
-    width: 140px;
-
-    font-size: 16px;
-    line-height: 18px;
-  }
+  text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
     width: 171px;
-
     font-size: 20px;
-    line-height: 21px;
+    line-height: 25px;
   }
 
   @media (min-width: @desktop-width) {
     width: 163px;
-
-    font-size: 20px;
-    line-height: 21px;
   }
 }
 
 .contacts__address {
+  width: 140px;
   font-style: normal;
-  font-weight: normal;
+  line-height: 20px;
   color: @basic-grey;
-
-  @media (min-width: @mobile-width) {
-    width: 140px;
-
-    font-size: 14px;
-    line-height: 20px;
-  }
 
   @media (min-width: @tablet-width) {
     width: 159px;
-
     font-size: 16px;
-    line-height: 20px;
     text-align: right;
   }
 
   @media (min-width: @desktop-width) {
     width: 155px;
-
-    font-size: 16px;
-    line-height: 20px;
     text-align: left;
   }
 }
@@ -96,42 +81,50 @@
   }
 }
 
-.contacts__map {
-  margin: 0;
+.contacts__map-wrapper {
   background-color: @grey-dark;
+}
 
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   width: 100%;
-  //   height: 100%;
-  //   background-image: url("../img/map-pin.png");
-  //   background-repeat: no-repeat;
-  //   background-position: center;
-  // }
+.contacts__map {
+  position: relative;
+  min-width: 320px;
+  height: 362px;
+  margin: 0;
+  background-color: @grey-lightest;
+  background-image: url("../img/map-pin.png"),
+    url("../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 57px 53px, cover;
+  background-position: center, center;
 
-  @media (min-width: @mobile-width) {
-    height: 362px;
-
-    background-image: url("../img/bg-map-mobile@1x.png");
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map-pin.png"),
+      url("../img/bg-map-mobile@2x.png");
   }
 
   @media (min-width: @tablet-width) {
-    width: auto;
-    height: 400px;
+    position: relative;
+    min-height: 396px;
+    background-image: url("../img/map-pin.png"),
+      url("../img/bg-map-tablet@1x.png");
+    background-size: 113px 106px, cover;
 
-    background-image: url("../img/bg-map-tablet@1x.png");
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-pin.png"),
+        url("../img/bg-map-tablet@2x.png");
+    }
   }
 
   @media (min-width: @desktop-width) {
     position: relative;
-    width: auto;
-    height: 400px;
+    min-height: 400px;
+    background-image: url("../img/map-pin.png"),
+      url("../img/bg-map-desktop@1x.png");
+    background-position: 74% 65%, center;
 
-    background-image: url("../img/bg-map-desktop@1x.png");
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-pin.png"),
+        url("../img/bg-map-desktop@2x.png");
+    }
   }
-}
-
-.map__address {
-  margin: 0;
 }
