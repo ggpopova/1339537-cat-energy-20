@@ -16,8 +16,8 @@
   top: 0;
   right: 0;
   z-index: 2;
-  width: 65px;
-  height: 65px;
+  width: 60px;
+  height: 60px;
   background-color: @basic-white;
   border: none;
   cursor: pointer;
@@ -25,6 +25,11 @@
   @media (min-width: @tablet-width) {
     display: none;
   }
+}
+
+.menu-nav__toggle--form-t {
+  top: -8px;
+  right: -3px;
 }
 
 .menu-nav--closed .menu-nav__toggle::before {
@@ -75,7 +80,6 @@
     flex-direction: row;
     justify-content: space-between;
     width: 440px;
-    margin-left: 85px;
   }
 
   @media (min-width: @desktop-width) {
@@ -96,15 +100,15 @@
 .menu-nav__link {
   width: 100%;
   padding-top: 22px;
-  padding-bottom: 22px;
-
+  padding-bottom: 23px;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
   font-family: "Oswald", "Arial", sans-serif;
   text-align: center;
   text-transform: uppercase;
-  border-top: 1px solid @grey-light;
+  letter-spacing: 0.6px;
+  border-bottom: 1px solid @grey-light;
 
   &:hover {
     border: none;
@@ -116,18 +120,20 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-top: 15px;
+    padding-top: 7px;
     padding-bottom: 8px;
-    border-top: none;
+    border: none;
     font-size: 18px;
     font-weight: normal;
     line-height: 24px;
+    letter-spacing: initial;
   }
 
   @media (min-width: @desktop-width) {
+    margin-top: -6px;
     padding-bottom: 10px;
     font-size: 20px;
-    line-height: 30px;
+    line-height: 22px;
   }
 }
 

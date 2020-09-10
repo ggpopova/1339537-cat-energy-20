@@ -4,6 +4,8 @@ var menuNavToggle = document.querySelector(".menu-nav__toggle");
 
 menuNav.classList.remove("menu-nav-nojs");
 
+menuNav.classList.add("menu-nav--closed");
+
 menuNavToggle.addEventListener("click", function () {
   if (menuNav.classList.contains("menu-nav--closed")) {
     menuNav.classList.remove("menu-nav--closed");
@@ -17,7 +19,7 @@ menuNavToggle.addEventListener("click", function () {
 //map
 
 document.addEventListener("DOMContentLoaded", function () {
-  var mapEl = document.querySelector("#map");
+  var mapEl = document.querySelector(".contacts__map");
 
   if (mapEl) {
     ymaps.ready(init);
