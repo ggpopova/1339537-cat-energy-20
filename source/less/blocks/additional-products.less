@@ -1,13 +1,11 @@
 .additional-products {
   position: relative;
   margin-bottom: 35px;
-  // display: flex;
-  // flex-direction: column;
 
   &::before {
     content: "";
     position: absolute;
-    top: 14px;
+    top: 15px;
     right: 0;
     z-index: -1;
     width: 50%;
@@ -16,8 +14,17 @@
   }
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+
     &::before {
       width: 100%;
+      top: 21px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      top: 22px;
     }
   }
 }
@@ -26,12 +33,12 @@
   display: inline-block;
   margin-top: 0;
   margin-right: 0;
-  margin-bottom: 35px;
+  margin-bottom: 34px;
   margin-left: 0;
   padding-top: 0;
   padding-right: 22px;
   padding-bottom: 0;
-  padding-left: 20px;
+  padding-left: 19px;
   font-size: 24px;
   line-height: 24px;
   font-weight: normal;
@@ -43,6 +50,7 @@
     grid-column: span 2;
     width: 415px;
     margin-left: 30px;
+    margin-bottom: 80px;
     padding-left: 37px;
     padding-right: 36px;
     font-size: 36px;
@@ -50,6 +58,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-bottom: 79px;
     margin-left: 70px;
     padding-right: 35px;
     padding-left: 40px;
@@ -58,21 +67,20 @@
 
 .additional-products__wrapper {
   display: grid;
-
   padding-left: 20px;
   padding-right: 20px;
 
   @media (min-width: @tablet-width) {
-    row-gap: 69px;
-    padding-left: 31px;
+    row-gap: 70px;
+    padding-left: 30px;
     padding-right: 30px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr;
-    column-gap: 80px;
+    column-gap: 79px;
     margin-bottom: 86px;
-    padding-left: 110px;
+    padding-left: 111px;
     padding-right: 110px;
   }
 }
@@ -81,9 +89,11 @@
   display: grid;
   padding: 0;
   .reset-list();
+  margin-top: 1px;
   margin-bottom: 39px;
 
   @media (min-width: @tablet-width) {
+    margin-top: 0;
     margin-bottom: 0;
   }
 
@@ -96,8 +106,8 @@
 .additional-products__item {
   width: 280px;
   margin: 0;
-  padding-top: 13px;
-  padding-bottom: 19px;
+  padding-top: 14px;
+  padding-bottom: 18px;
   border-top: 1px solid @grey-darker;
   border-bottom: 1px solid @grey-darker;
 
@@ -106,7 +116,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 708px;
-    padding: 26px 37px 28px 38px;
+    padding-top: 25px;
+    padding-right: 37px;
+    padding-bottom: 26px;
+    padding-left: 38px;
     font-size: 16px;
     line-height: 20px;
     border: 1px solid @grey-darker;
@@ -114,15 +127,48 @@
 
   @media (min-width: @desktop-width) {
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     width: auto;
-    padding-top: 15px;
-    padding-left: 0;
+    padding-top: 16px;
     padding-right: 0;
-    padding-bottom: 17px;
+    padding-bottom: 13px;
+    padding-left: 0;
     border: none;
     border-top: 1px solid @grey-darker;
     border-bottom: 1px solid @grey-darker;
+  }
+}
+
+.additional-products__item--water {
+  margin-top: -1px;
+  padding-top: 12px;
+  padding-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -1px;
+    margin-bottom: -1px;
+    padding-top: 14px;
+    padding-bottom: 13px;
+  }
+}
+
+.additional-products__item--vitamins {
+  margin-top: -1px;
+  padding-bottom: 16px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 16px;
+    padding-bottom: 12px;
   }
 }
 
@@ -132,21 +178,24 @@
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 14px;
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
     flex-grow: 1;
     margin: 0;
+    margin-right: auto;
     font-size: 20px;
     line-height: 20px;
   }
 }
 
 .additional-products__table {
+  border-spacing: 2px;
+
   @media (min-width: @desktop-width) {
-    margin-right: 40px;
+    margin-right: 35px;
   }
 }
 
@@ -164,38 +213,62 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 280px;
   font-size: 14px;
   line-height: 20px;
   font-family: "Arial", "PT Sans Narrow", sans-serif;
 
-  @media (min-width: @mobile-width) {
-    width: 280px;
-    line-height: 14px;
+  @media (min-width: @tablet-width) {
+    width: auto;
   }
+}
+
+.additional-products__count {
+  padding: 0;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 14px;
+  color: @basic-grey;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 20px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 195px;
+    margin-top: 9px;
+    text-align: left;
+  }
 }
 
 .additional-products__price {
   line-height: 14px;
+  color: @basic-grey;
   text-transform: uppercase;
 
-  @media (min-width: @mobile-width) {
+  @media (min-width: @tablet-width) {
+    width: 95px;
     font-size: 16px;
     line-height: 20px;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 8px;
   }
 }
 
 .additional-products__button {
   display: block;
   width: 280px;
-  margin: 0 auto;
-  padding-top: 9px;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  padding-top: 11px;
   padding-left: 44px;
-  padding-bottom: 9px;
+  padding-bottom: 11px;
   padding-right: 44px;
   font-weight: normal;
   font-size: 16px;
@@ -206,7 +279,8 @@
   background-color: @basic-green;
 
   @media (min-width: @tablet-width) {
-    margin-top: 20px;
+    margin-top: 19px;
+
     width: 633px;
   }
 
@@ -214,6 +288,10 @@
     width: 244px;
     margin: 0;
   }
+}
+
+.additional-products__button--milk {
+  margin-bottom: -1px;
 }
 
 .additional-products__stock {
@@ -224,7 +302,7 @@
   width: 280px;
   height: 289px;
   margin: 0 auto;
-  padding-top: 48px;
+  padding-top: 42px;
   background-color: @basic-green;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -240,6 +318,8 @@
     width: 708px;
     height: 200px;
     padding-top: 0;
+    padding-left: 86px;
+    padding-right: 123px;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -252,7 +332,10 @@
     flex-direction: column;
     width: 245px;
     height: 289px;
-    padding-top: 42px;
+    padding-top: 33px;
+    padding-right: 0;
+    padding-bottom: 10px;
+    padding-left: 0;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -262,8 +345,21 @@
   }
 }
 
-.additional-products__stock-gift {
+.additional-products__stock-icon-gift {
   fill: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 15px;
+    margin-left: 0;
+    width: 63px;
+    height: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+  }
 }
 
 .additional-products__stock-slogan {
@@ -279,6 +375,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin: 0 auto;
     text-align: center;
   }
 }

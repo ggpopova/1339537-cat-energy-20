@@ -8,8 +8,6 @@ const imagemin = require("gulp-imagemin");
 const gulpWebp = require("gulp-webp");
 const rename = require("gulp-rename");
 const svgstore = require("gulp-svgstore");
-const posthtml = require("gulp-posthtml");
-const include = require("posthtml-include");
 const csso = require("gulp-csso");
 const sync = require("browser-sync").create();
 const del = require("del");
@@ -34,6 +32,17 @@ const styles = () => {
 };
 
 exports.styles = styles;
+
+const nonMinifiedStyles = () => {
+  return gulp
+    .src("source/less/style.less")
+    .pipe(plumber())
+    .pipe(less())
+    .pipe(gulp.dest("build/css"))
+    .pipe(sync.stream());
+};
+
+exports.nonMinifiedStyles = nonMinifiedStyles;
 
 // Server
 
@@ -67,12 +76,6 @@ const scripts = () => {
 };
 
 exports.scripts = scripts;
-
-const html = () => {
-
-};
-
-exports.html = html;
 
 // Watcher
 
@@ -108,7 +111,7 @@ const webp = () => {
   return gulp
     .src("source/img/**/*.{jpg,png}")
     .pipe(gulpWebp({ quality: 90 }))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("source/img"));
 };
 
 exports.webp = webp;
@@ -135,6 +138,7 @@ const copy = () => {
         "source/img/**",
         "source/*.ico",
         "source/*.html",
+        "source/js/**/*.js",
       ],
       {
         base: "source",
@@ -156,10 +160,10 @@ exports.clean = clean;
 const build = (done) => gulp.series (
   clean,
   copy,
+  nonMinifiedStyles,
   styles,
   scripts,
   sprite,
-  // html,
 )(done);
 
 exports.build = build;

@@ -3,16 +3,20 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Подбор программы | CAT ENERGY - интернет-магазин</title>
+  <title>Подбор программы | Cat Energy - интернет-магазин</title>
   <link href="css/style.min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/oswaldmedium.woff" as="font" type="font/woff" crossorigin="">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/oswaldregular.woff" as="font" type="font/woff" crossorigin="">
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
   <div class="container">
-    <header class="page-header">
-      <a class="page-header__logo" href="index.html" aria-label="Логотип интернет-магазина CAT ENERGY">
+    <header class="page-header container">
+      <a class="page-header__logo page-header__logo--form" href="index.html" aria-label="Главная страница интернет-магазина Cat Energy">
         <picture>
           <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -20,8 +24,8 @@
         </picture>
       </a>
 
-      <nav class="menu-nav menu-nav--closed menu-nav-nojs">
-        <button class="menu-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span>
+      <nav class="menu-nav menu-nav-nojs">
+        <button class="menu-nav__toggle menu-nav__toggle--form-t" type="button"><span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="menu-nav__wrapper">
           <ul class="menu-nav__menu">
@@ -32,7 +36,7 @@
               <a class="menu-nav__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="menu-nav__item">
-              <a class="menu-nav__link menu-nav__link--current" href="form.html">Подбор программы</a>
+              <a class="menu-nav__link menu-nav__link--current">Подбор программы</a>
             </li>
           </ul>
         </div>
@@ -41,41 +45,42 @@
     </header>
   </div>
 
-  <main class="page-main page-main__form">
+  <main class="page-main">
 
-    <h1 class="page-main__header container">Подбор программы</h1>
+    <h1 class="page-main__header page-main__header--form container">Подбор программы</h1>
 
     <form class="page-main__form form" action="https://echo.htmlacademy.ru" method="POST">
       <h2 class="form__text container">Заполните анкету, и мы подберем<br>программу питания для вашего кота</h2>
 
       <div class="form__list-wrapper container">
-
-        <ul class="form__list form-cat-data container">
-          <li class="form__item">
-            <label class="form__label" for="form-name">Имя:*</label>
-            <input class="form__input-text" id="form-name" type="text" name="name" placeholder="Барсик">
-          </li>
-          <li class="form__item">
-            <label class="form__label" for="form-weight">Вес (кг):*</label>
-            <input class="form__input-text" id="form-weight" type="number" name="number" placeholder="7">
-          </li>
-          <li class="form__item">
-            <label class="form__label" for="form-age">Возраст (лет):</label>
-            <input class="form__input-text" id="form-age" type="number" name="number" placeholder="7">
-          </li>
-        </ul>
+        <fieldset class="form__wrapper">
+          <ul class="form__list form__cat-data container">
+            <li class="form__item">
+              <label class="form__label" for="form-name">Имя:*</label>
+              <input class="form__input-text" id="form-name" type="text" name="name" placeholder="Барсик">
+            </li>
+            <li class="form__item">
+              <label class="form__label" for="form-weight">Вес (кг):*</label>
+              <input class="form__input-text" id="form-weight" type="text" name="number" placeholder="7">
+            </li>
+            <li class="form__item">
+              <label class="form__label" for="form-age">Возраст (лет):</label>
+              <input class="form__input-text" id="form-age" type="text" name="number" placeholder="7">
+            </li>
+          </ul>
+        </fieldset>
 
         <fieldset class="form__list-border-wrapper">
           <ul class="form__list form__list--mass container">
-            <li class="form__item">
+            <li class="form__item form__item--mass">
               <input class="form__input-radio visually-hidden" name="mass-target" type="radio" id="reduce-weight" checked>
               <label class="form__label form__label--radio" for="reduce-weight">Похудение</label>
             </li>
-            <li class="form__item">
+            <li class="form__item form__item--mass">
               <input class="form__input-radio visually-hidden" name="mass-target" type="radio" id="gain-weight">
-              <label class="form__label form__label--radio" for="gain-weight">Набор веса</label>
+              <label class="form__label form__label--radio" for="gain-weight">Набор массы</label>
             </li>
-            <li class="form__item">
+            <li class="form__item form__item--mass">
               <input class="form__input-radio visually-hidden" name="mass-target" type="radio" id="need-advice">
               <label class="form__label form__label--radio" for="need-advice">Не знаю (Нужен ваш совет)</label>
             </li>
@@ -84,15 +89,15 @@
 
       </div>
 
-      <fieldset class="form__fieldset">
-        <div class="form__fieldset form__fieldset--owner container">
+      <div class="form__fieldset form__fieldset--bt">
+      <fieldset class="form__fieldset form__fieldset--owner container">
           <legend class="form__legend form__legend--owner">Контактные данные (владельца кота)</legend>
 
           <ul class="form__list form__list--contacts">
             <li class="form__item form__item--icon-mail">
               <label class="form__label form__label--email" for="form-email">E-mail:*</label>
               <input class="form__input-text form__input-text--email" id="form-email" type="email" name="name" placeholder="kuklachev@gmail.com">
-                <svg class="icon-mail" width="17" height="13">
+                <svg class="form__icon-mail" width="17" height="13">
                   <use xlink:href="img/sprite.svg#icon-mail"></use>
                 </svg>
             </li>
@@ -100,24 +105,23 @@
             <li class="form__item form__item--phone">
               <label class="form__label form__label--phone" for="form-phone">Телефон:*</label>
               <input class="form__input-text form__input-text--phone" id="form-phone" type="tel" name="phone" placeholder="8 (960) 900-60-90">
-                <svg class="icon-phone" width="20" height="20">
+                <svg class="form__icon-phone" width="20" height="20">
                   <use xlink:href="img/sprite.svg#icon-phone"></use>
                 </svg>
             </li>
-          </ul>
-        </div>
+            </ul>
       </fieldset>
+      </div>
 
-      <fieldset class="form__fieldset">
-        <div class="form__fieldset form__fieldset--comments container">
+      <div class="form__fieldset form__fieldset--bt">
+      <fieldset class="form__fieldset form__fieldset--comments container">
           <legend class="form__legend form__legend--comments">Комментарий</legend>
-          <label class="form__label" for="form__textarea"></label>
           <textarea class="form__textarea form__input" id="form__textarea" name="comments" rows="7" cols="30" placeholder="Расскажите обо всех повaдках кота"></textarea>
-        </div>
       </fieldset>
+</div>
 
-      <fieldset class="form__fieldset">
-        <div class="form__fieldset form__fieldset--additional container">
+<div class="form__fieldset form__fieldset--bt">
+      <fieldset class="form__fieldset form__fieldset--additional container">
           <legend class="form__legend form__legend--additional">Дополнительно</legend>
           <ul class="form__list form__list--additional container">
             <li class="form__item">
@@ -137,8 +141,8 @@
               <label class="form__label form__label--checkbox" for="vitamins">Витамины</label>
             </li>
           </ul>
-        </div>
       </fieldset>
+</div>
 
       <div class="form__fieldset-button-wrapper container">
         <button class="form__button" type="submit">Oтправить заявку</button>
@@ -159,7 +163,7 @@
 
   <footer class="page-footer">
     <div class="page-footer__wrapper container">
-      <a class="page-footer__logo page-footer__logo--link" href="#">
+      <a class="page-footer__logo" href="index.html">
 
         <svg width="128" height="24" viewBox="0 0 128 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g>
@@ -184,21 +188,21 @@
       <div class="page-footer__social">
         <ul class="page-footer__menu-social">
           <li>
-            <a class="page-footer__menu-social-link" href="#" aria-label="Переход на сайт в ВКонтакте">
+            <a class="page-footer__menu-social-link" href="#" aria-label="Страница интернет-магазина Cat Energy в социальной сети ВКонтакте">
               <svg class="social-icon social-icon--vk" width="23" height="16">
                 <use xlink:href="img/sprite.svg#icon-vk"></use>
               </svg>
             </a>
           </li>
           <li>
-            <a class="page-footer__menu-social-link" href="#" aria-label="Переход на сайт в Инстаграм">
+            <a class="page-footer__menu-social-link" href="#" aria-label="Страница интернет-магазина Cat Energy в социальной сети Instagram">
               <svg class="social-icon social-icon--ig" width="16" height="16">
                 <use xlink:href="img/sprite.svg#icon-insta"></use>
               </svg>
             </a>
           </li>
           <li>
-            <a class="page-footer__menu-social-link" href="#" aria-label="Переход на сайт в Фейсбук">
+            <a class="page-footer__menu-social-link" href="#" aria-label="Страница интернет-магазина Cat Energy в социальной сети Facebook">
               <svg class="social-icon social-icon--fb" width="22" height="22">
                 <use xlink:href="img/sprite.svg#icon-fb"></use>
               </svg>
@@ -210,7 +214,7 @@
       <div class="page-footer__copyright">
         <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
           HTML Academy
-          <svg class="page-footer__copyright__logo-image" width="27" height="34">
+          <svg class="page-footer__copyright-logo-image" width="27" height="34">
             <path d="M13.6426.0157537L13.5 0 0 1.40733V26.0129L13.5 34 27 26.0129V1.40733L13.6426.0157537zM25.2344 25.0151L13.5 31.9573 1.76561 25.0151V14.9293l11.68509 6.9158.0194 1.2533-8.01659-4.7436-.01056 1.2253 8.04645 4.8084.0194 1.2865-8.04472-4.7576-.01057 1.2253L13.5 26.9511l8.1239-4.8329V16.909l3.6193-2.1495-.0088 10.2556zm0-11.5632l-3.2197 1.88-1.4822.8752-7.0659-4.187-.0106 1.2253 6.0397 3.5726-.0528.0315-.1303.0752-.859.4919-4.987-2.9477-.0106 1.2253 3.9361 2.328-.933.6092-.0211.0122-2.9714-1.7416-.0106 1.2253 1.9469 1.1342-1.9874 1.1868-11.6182-6.8721 11.6376-6.95789 11.7995 6.83359zm0-1.2253L13.4401 5.31075 1.76561 12.2196V2.9897L13.5 1.76442 25.2344 2.9897v9.2369z"/>
           </svg>
         </a>
